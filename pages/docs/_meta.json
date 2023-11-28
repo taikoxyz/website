@@ -1,0 +1,20 @@
+{
+  "index": {
+    "title": "Quickstart"
+  },
+  "guides": {
+    "title": "Guides"
+  },
+  "reference": {
+    "title": "Reference"
+  },
+  "manuals": {
+    "title": "Manuals"
+  },
+  "concepts": {
+    "title": "Concepts"
+  },
+  "resources": {
+    "title": "Resources"
+  }
+}
