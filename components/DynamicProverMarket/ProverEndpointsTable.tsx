@@ -196,13 +196,12 @@ export function ProverEndpointsTable() {
         <thead>
           <tr>
             <th>Prover Name</th>
-
             <th>Prover Endpoint</th>
             <th
               className="cursor-pointer"
-              onClick={() => sortData("minimumGas")}
+              onClick={() => sortData("prover_fee")}
             >
-              Prover Fee {renderSortArrow("minimumGas")}
+              Prover Fee {renderSortArrow("prover_fee")}
             </th>
           </tr>
         </thead>
