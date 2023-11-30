@@ -209,6 +209,7 @@ export function ProverEndpointsTable() {
         <tbody>
           {provers.map((prover, index) => (
             <tr key={index}>
+              <td>{prover.prover_name}</td>
               <td>
                 <StyledLink href={prover.prover_url} text={prover.prover_url} />
               </td>
