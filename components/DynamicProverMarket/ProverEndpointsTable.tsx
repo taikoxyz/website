@@ -45,7 +45,7 @@ export function ProverEndpointsTable() {
     // Make sure to include a trailing `/`.
     url = url.charAt(url.length - 1) === "/" ? url : `${url}/`;
     // Add docs/reference/prover-market-page# to the URL.
-    url = `${url}docs/reference/prover-market-page#`;
+    url = `${url}docs/reference/prover-market-page`;
     return url;
   };
 
