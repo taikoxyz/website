@@ -13,18 +13,21 @@ export interface Database {
         Row: {
           created_at: string
           prover_fee: number
+          prover_name: string
           prover_url: string
           user_id: string
         }
         Insert: {
           created_at?: string
           prover_fee: number
+          prover_name: string
           prover_url: string
           user_id: string
         }
         Update: {
           created_at?: string
           prover_fee?: number
+          prover_name?: string
           prover_url?: string
           user_id?: string
         }

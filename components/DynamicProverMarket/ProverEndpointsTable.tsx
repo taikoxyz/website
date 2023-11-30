@@ -24,6 +24,7 @@ export function ProverEndpointsTable() {
   const [sortOrder, setSortOrder] = useState("asc");
   const [sortColumn, setSortColumn] = useState("currentCapacity");
   const [newProverEndpoint, setNewProverEndpoint] = useState("");
+  const [proverName, setProverName] = useState("");
   const [newProverFee, setNewProverFee] = useState("");
   const [proverExist, setProverExist] = useState(false);
 
@@ -55,6 +56,7 @@ export function ProverEndpointsTable() {
     if (!proverExist) {
       try {
         await addEndpoint({
+          prover_name: proverName,
           prover_url: newProverEndpoint,
           prover_fee: Number(newProverFee),
         });
@@ -69,6 +71,7 @@ export function ProverEndpointsTable() {
     } else {
       try {
         await editEndpoint({
+          prover_name: proverName,
           prover_url: newProverEndpoint,
           prover_fee: Number(newProverFee),
         });
@@ -162,6 +165,12 @@ export function ProverEndpointsTable() {
           onSubmit={(e) => addOrEditProverEndpoint(e)}
         >
           <input
+            value={proverName}
+            onChange={(e) => setProverName(e.target.value)}
+            className="my-3 py-1 text-center rounded-md w-full"
+            placeholder="My Prover"
+          />
+          <input
             value={newProverEndpoint}
             onChange={(e) => setNewProverEndpoint(e.target.value)}
             className="my-3 py-1 text-center rounded-md w-full"
@@ -186,12 +195,14 @@ export function ProverEndpointsTable() {
       <table className="table-auto w-full text-center mt-8">
         <thead>
           <tr>
-            <th>API Endpoint</th>
+            <th>Prover Name</th>
+
+            <th>Prover Endpoint</th>
             <th
               className="cursor-pointer"
               onClick={() => sortData("minimumGas")}
             >
-              Minimum Fee {renderSortArrow("minimumGas")}
+              Prover Fee {renderSortArrow("minimumGas")}
             </th>
           </tr>
         </thead>

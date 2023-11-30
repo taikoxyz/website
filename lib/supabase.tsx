@@ -8,6 +8,7 @@ export const client = createClient<Database>(
 
 type Endpoint = {
   user_id?: string;
+  prover_name: string;
   prover_url: string;
   prover_fee: number;
 };
