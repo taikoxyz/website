@@ -7,6 +7,7 @@ export const client = createClient<Database>(
 );
 
 type Endpoint = {
+  user_id?: string;
   prover_url: string;
   prover_fee: number;
 };
@@ -39,18 +40,30 @@ export async function addEndpoint(endpoint: Endpoint) {
     .from("test")
     .insert([endpointWithUserId]);
 
-  if (error) {
-    console.error("Error inserting data:", error);
-    return;
-  }
-
   return data;
 }
 /**
  * Edit endpoint in database (Must be authorized, logged into github)
  */
 export async function editEndpoint(endpoint: Endpoint) {
-  const { data, error } = await client.from("test").update(endpoint).select();
-  console.log("🚀 | editEndpoint | data:", data);
+  let session = await client.auth.getSession();
+
+  if (!session) {
+    console.error("User must be logged in to insert data");
+    return;
+  }
+
+  console.log("🚀 | edit | session:", session);
+  const { data, error } = await client
+    .from("test")
+    .update(endpoint)
+    .match({ user_id: session.data.session.user.id });
   console.log("🚀 | editEndpoint | error:", error);
+  console.log("🚀 | editEndpoint | data:", data);
+
+  if (error) {
+    return error;
+  }
+
+  return data;
 }

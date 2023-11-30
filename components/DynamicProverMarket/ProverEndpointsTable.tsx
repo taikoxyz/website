@@ -1,7 +1,7 @@
 // import "@/styles/app.css";
 
 import { SessionContextProvider, useUser } from "@supabase/auth-helpers-react";
-import { addEndpoint, getEndpoints } from "../../lib/supabase";
+import { addEndpoint, editEndpoint, getEndpoints } from "../../lib/supabase";
 import { useEffect, useState } from "react";
 
 import type { AppProps } from "next/app";
@@ -25,6 +25,7 @@ export function ProverEndpointsTable() {
   const [sortColumn, setSortColumn] = useState("currentCapacity");
   const [newProverEndpoint, setNewProverEndpoint] = useState("");
   const [newProverFee, setNewProverFee] = useState("");
+  const [proverExist, setProverExist] = useState(false);
 
   const user = useUser();
 
@@ -43,29 +44,64 @@ export function ProverEndpointsTable() {
     url = url.includes("http") ? url : `https://${url}`;
     // Make sure to include a trailing `/`.
     url = url.charAt(url.length - 1) === "/" ? url : `${url}/`;
-    console.log("🚀 | getURL | url:", url);
-    return "http://localhost:3000/docs/reference/prover-market-page";
+    return url;
   };
 
-  async function addProverEndpoint(e) {
+  async function addOrEditProverEndpoint(e) {
     e.preventDefault();
 
-    try {
-      addEndpoint({
-        prover_url: newProverEndpoint,
-        prover_fee: Number(newProverFee),
-      });
+    if (!proverExist) {
+      try {
+        await addEndpoint({
+          prover_url: newProverEndpoint,
+          prover_fee: Number(newProverFee),
+        });
 
-      // Success: refresh data and show toast?
-      fetchProverEndpoints();
-      setNewProverEndpoint("");
-    } catch (error) {
-      console.error(error);
-      // Show error as a toast message
+        // Success: refresh data and show toast?
+        fetchProverEndpoints();
+        // Show success toast
+      } catch (error) {
+        console.error(error);
+        // Show error as a toast message
+      }
+    } else {
+      try {
+        await editEndpoint({
+          prover_url: newProverEndpoint,
+          prover_fee: Number(newProverFee),
+        });
+
+        // Success: refresh data and show toast?
+        fetchProverEndpoints();
+      } catch (error) {
+        console.error(error);
+        // Show error as a toast message
+      }
     }
   }
 
   async function fetchProverEndpoints() {
+    try {
+      const proverEndpoints = await getEndpoints();
+      setProvers(proverEndpoints.sort((a, b) => b.prover_fee - a.prover_fee));
+
+      // Find user's endpoint if it exists and set as newProverEndpoint
+
+      const userEndpoint = proverEndpoints.find(
+        (endpoint) => endpoint.user_id === user.id
+      );
+      if (userEndpoint) {
+        setNewProverEndpoint(userEndpoint.prover_url);
+        setNewProverFee(userEndpoint.prover_fee.toString());
+        setProverExist(true);
+      }
+      console.log(proverEndpoints);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  async function fetchUserEndpoint() {
     try {
       const proverEndpoints = await getEndpoints();
       setProvers(proverEndpoints.sort((a, b) => b.prover_fee - a.prover_fee));
@@ -103,7 +139,7 @@ export function ProverEndpointsTable() {
 
   useEffect(() => {
     fetchProverEndpoints();
-  }, []);
+  }, [user]);
 
   return (
     <>
@@ -118,10 +154,10 @@ export function ProverEndpointsTable() {
           redirectTo={getURL()}
         />
       )}
-      <div>
+      {user && (
         <form
           className="flex justify-between items-center gap-1"
-          onSubmit={(e) => addProverEndpoint(e)}
+          onSubmit={(e) => addOrEditProverEndpoint(e)}
         >
           <input
             value={newProverEndpoint}
@@ -140,37 +176,34 @@ export function ProverEndpointsTable() {
             className="hover:cursor-pointer text-neutral-100 bg-[#E81899] hover:bg-[#d1168a] border-solid border-neutral-200 focus:ring-4 focus:outline-none focus:ring-neutral-100 font-medium rounded-md text-sm my-3 py-1.5 px-1 text-center whitespace-nowrap"
             type="submit"
           >
-            Add prover pool
+            {!proverExist ? "Add prover pool" : "Edit prover pool"}
           </button>
         </form>
+      )}
 
-        <table className="table-auto w-full text-center mt-8">
-          <thead>
-            <tr>
-              <th>API Endpoint</th>
-              <th
-                className="cursor-pointer"
-                onClick={() => sortData("minimumGas")}
-              >
-                Minimum Fee {renderSortArrow("minimumGas")}
-              </th>
+      <table className="table-auto w-full text-center mt-8">
+        <thead>
+          <tr>
+            <th>API Endpoint</th>
+            <th
+              className="cursor-pointer"
+              onClick={() => sortData("minimumGas")}
+            >
+              Minimum Fee {renderSortArrow("minimumGas")}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {provers.map((prover, index) => (
+            <tr key={index}>
+              <td>
+                <StyledLink href={prover.prover_url} text={prover.prover_url} />
+              </td>
+              <td>{prover.prover_fee}</td>
             </tr>
-          </thead>
-          <tbody>
-            {provers.map((prover, index) => (
-              <tr key={index}>
-                <td>
-                  <StyledLink
-                    href={prover.prover_url}
-                    text={prover.prover_url}
-                  />
-                </td>
-                <td>{prover.prover_fee}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+          ))}
+        </tbody>
+      </table>
     </>
   );
 }
