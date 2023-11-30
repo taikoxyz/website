@@ -13,9 +13,7 @@ type Endpoint = {
 };
 
 export async function getEndpoints() {
-  const { data, error } = await client.from("test").select("*");
-  console.log("🚀 | getEndpoints | data:", data);
-  console.log("🚀 | getEndpoints | error:", error);
+  const { data, error } = await client.from("prover_market").select("*");
 
   return data;
 }
@@ -28,8 +26,6 @@ export async function addEndpoint(endpoint: Endpoint) {
     return;
   }
 
-  console.log("🚀 | addEndpoint | session:", session);
-
   // Add the user_id to the endpoint data
   const endpointWithUserId = {
     ...endpoint,
@@ -37,7 +33,7 @@ export async function addEndpoint(endpoint: Endpoint) {
   };
 
   const { data, error } = await client
-    .from("test")
+    .from("prover_market")
     .insert([endpointWithUserId]);
 
   return data;
@@ -53,13 +49,10 @@ export async function editEndpoint(endpoint: Endpoint) {
     return;
   }
 
-  console.log("🚀 | edit | session:", session);
   const { data, error } = await client
-    .from("test")
+    .from("prover_market")
     .update(endpoint)
     .match({ user_id: session.data.session.user.id });
-  console.log("🚀 | editEndpoint | error:", error);
-  console.log("🚀 | editEndpoint | data:", data);
 
   if (error) {
     return error;

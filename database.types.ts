@@ -9,7 +9,7 @@ export type Json =
 export interface Database {
   public: {
     Tables: {
-      test: {
+      prover_market: {
         Row: {
           created_at: string
           prover_fee: number
@@ -30,7 +30,7 @@ export interface Database {
         }
         Relationships: [
           {
-            foreignKeyName: "test_user_id_fkey"
+            foreignKeyName: "prover_market_user_id_fkey"
             columns: ["user_id"]
             isOneToOne: true
             referencedRelation: "users"
