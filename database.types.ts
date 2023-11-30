@@ -12,17 +12,31 @@ export interface Database {
       test: {
         Row: {
           created_at: string
+          prover_fee: number
+          prover_url: string
           user_id: string
         }
         Insert: {
-          created_at: string
-          user_id?: string
+          created_at?: string
+          prover_fee: number
+          prover_url: string
+          user_id: string
         }
         Update: {
           created_at?: string
+          prover_fee?: number
+          prover_url?: string
           user_id?: string
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "test_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: true
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          }
+        ]
       }
     }
     Views: {

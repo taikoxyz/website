@@ -1,13 +1,13 @@
 // import "@/styles/app.css";
 
 import { SessionContextProvider, useUser } from "@supabase/auth-helpers-react";
+import { addEndpoint, getEndpoints } from "../../lib/supabase";
 import { useEffect, useState } from "react";
 
 import type { AppProps } from "next/app";
 import { Auth } from "@supabase/auth-ui-react";
 import { StyledLink } from "../StyledLink";
 import { ThemeSupa } from "@supabase/auth-ui-shared";
-import { addEndpoint } from "../../lib/supabase";
 import { createClient } from "@supabase/supabase-js";
 
 export const supabase = createClient(
@@ -24,6 +24,7 @@ export function ProverEndpointsTable() {
   const [sortOrder, setSortOrder] = useState("asc");
   const [sortColumn, setSortColumn] = useState("currentCapacity");
   const [newProverEndpoint, setNewProverEndpoint] = useState("");
+  const [newProverFee, setNewProverFee] = useState("");
 
   const user = useUser();
 
@@ -51,8 +52,8 @@ export function ProverEndpointsTable() {
 
     try {
       addEndpoint({
-        id: generateRandomNumber(),
-        created_at: "0",
+        prover_url: newProverEndpoint,
+        prover_fee: Number(newProverFee),
       });
 
       // Success: refresh data and show toast?
@@ -64,17 +65,10 @@ export function ProverEndpointsTable() {
     }
   }
 
-  async function getProverEndpoints() {
-    let { data: test, error } = await supabase.from("test").select("*");
-    console.log(test);
-
-    return []; // TODO: fetch from DB
-  }
-
   async function fetchProverEndpoints() {
     try {
-      const proverEndpoints = await getProverEndpoints();
-      setProvers(proverEndpoints.sort((a, b) => b.id - a.id));
+      const proverEndpoints = await getEndpoints();
+      setProvers(proverEndpoints.sort((a, b) => b.prover_fee - a.prover_fee));
       console.log(proverEndpoints);
     } catch (error) {
       console.error(error);
@@ -112,7 +106,7 @@ export function ProverEndpointsTable() {
   }, []);
 
   return (
-    <SessionContextProvider supabaseClient={supabase}>
+    <>
       {!user && (
         <Auth
           supabaseClient={supabase}
@@ -126,17 +120,24 @@ export function ProverEndpointsTable() {
       )}
       <div>
         <form
-          className="flex flex-col items-center my-4"
+          className="flex justify-between items-center gap-1"
           onSubmit={(e) => addProverEndpoint(e)}
         >
           <input
             value={newProverEndpoint}
             onChange={(e) => setNewProverEndpoint(e.target.value)}
-            className="my-3 py-1 text-center"
+            className="my-3 py-1 text-center rounded-md w-full"
             placeholder="http://192.168.20.1:9876"
           />
+          <input
+            value={newProverFee}
+            onChange={(e) => setNewProverFee(e.target.value)}
+            className="my-3 py-1 text-center rounded-md"
+            placeholder="10"
+          />
+
           <button
-            className="hover:cursor-pointer text-neutral-100 bg-[#E81899] hover:bg-[#d1168a] border-solid border-neutral-200 focus:ring-4 focus:outline-none focus:ring-neutral-100 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center m-1 w-48 justify-center"
+            className="hover:cursor-pointer text-neutral-100 bg-[#E81899] hover:bg-[#d1168a] border-solid border-neutral-200 focus:ring-4 focus:outline-none focus:ring-neutral-100 font-medium rounded-md text-sm my-3 py-1.5 px-1 text-center whitespace-nowrap"
             type="submit"
           >
             Add prover pool
@@ -153,28 +154,24 @@ export function ProverEndpointsTable() {
               >
                 Minimum Fee {renderSortArrow("minimumGas")}
               </th>
-              <th
-                className="cursor-pointer"
-                onClick={() => sortData("currentCapacity")}
-              >
-                Current Capacity {renderSortArrow("currentCapacity")}
-              </th>
             </tr>
           </thead>
           <tbody>
             {provers.map((prover, index) => (
               <tr key={index}>
                 <td>
-                  <StyledLink href={prover.url} text={prover.url} />
+                  <StyledLink
+                    href={prover.prover_url}
+                    text={prover.prover_url}
+                  />
                 </td>
-                <td>{prover.minimumGas}</td>
-                <td>{prover.currentCapacity}</td>
+                <td>{prover.prover_fee}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-    </SessionContextProvider>
+    </>
   );
 }
 
