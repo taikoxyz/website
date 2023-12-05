@@ -10,7 +10,7 @@ This guide will help get your contract verified on Taiko!
 
 ## Steps
 
-<Tabs items={["Hardhat", "Blockscout", "Foundry"]} defaultIndex="0">
+<Tabs items={["Hardhat", "Foundry", "Blockscout"]} defaultIndex="0">
   <Tab>
     **1. Add Etherscan config to Hardhat config**
 
@@ -38,11 +38,11 @@ This guide will help get your contract verified on Taiko!
             },
             customChains: [
                 {
-                    network: "taiko",
+                    network: 'taiko',
                     chainId: 167007,
                     urls: {
-                        apiURL: "https://blockscoutapi.jolnir.taiko.xyz/api",
-                        browserURL: "https://explorer.jolnir.taiko.xyz",
+                    apiURL: "https://api.routescan.io/v2/network/testnet/evm/167007/etherscan",
+                    browserURL: "https://taikoscan.network",
                     },
                 },
             ],
@@ -60,13 +60,10 @@ This guide will help get your contract verified on Taiko!
     npx hardhat verify --network taiko DEPLOYED_CONTRACT_ADDRESS "Constructor argument 1"
     ```
 
-    **3. View your verified contract on Blockscout**
+    **3. View your verified contract on Taikoscan**
 
-    Check the [Taiko block explorer](https://explorer.jolnir.taiko.xyz) link from the output to see your contract was verified.
+    Check the [Taikoscan block explorer](https://taikoscan.network) link from the output to see your contract was verified.
 
-  </Tab>
-  <Tab>
-    Follow Blockscout's [official guide](https://docs.blockscout.com/for-users/verifying-a-smart-contract) to verify your contract on Taiko's blockscout explorers.
   </Tab>
   <Tab>
     Copy the following Foundry test repo https://github.com/MarcusWentz/foundry-testing using git clone SSH:
@@ -74,9 +71,9 @@ This guide will help get your contract verified on Taiko!
     git clone git@github.com:MarcusWentz/foundry-testing.git
     ```
 
-    Deploy to Taiko and verify at the same time on Blockscout (with EIP-1559 gas [transaction type 1]):
+    Deploy to Taiko and verify at the same time on Routescan (with EIP-1559 gas [transaction type 1]):
     ```sh
-    forge create --rpc-url https://rpc.jolnir.taiko.xyz --private-key $devTestnetPrivateKey src/Contract.sol:SimpleStorage --verify --verifier blockscout --verifier-url https://blockscoutapi.jolnir.taiko.xyz/api\?
+    forge create --rpc-url https://rpc.jolnir.taiko.xyz --private-key $devTestnetPrivateKey src/Contract.sol:SimpleStorage --verify --verifier etherscan --verifier-url https://api.routescan.io/v2/network/testnet/evm/167007/etherscan
     ```
     <Callout type="info">
         To use Legacy gas for [transaction type 0], add the
@@ -85,9 +82,12 @@ This guide will help get your contract verified on Taiko!
         ```
         flag with forge create. Example:
         ```
-        forge create --legacy --rpc-url https://rpc.jolnir.taiko.xyz --private-key $devTestnetPrivateKey src/Contract.sol:SimpleStorage --verify --verifier blockscout --verifier-url https://blockscoutapi.jolnir.taiko.xyz/api\?
+        forge create --legacy --rpc-url https://rpc.jolnir.taiko.xyz --private-key $devTestnetPrivateKey src/Contract.sol:SimpleStorage --verify --verifier etherscan --verifier-url https://api.routescan.io/v2/network/testnet/evm/167007/etherscan
         ```
     </Callout>
 
+  </Tab>
+  <Tab>
+    Follow Blockscout's [official guide](https://docs.blockscout.com/for-users/verifying-a-smart-contract) to verify your contract on Taiko's blockscout explorers.
   </Tab>
 </Tabs>
