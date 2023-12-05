@@ -19,7 +19,7 @@ export default {
   },
   darkMode: false,
   docsRepositoryBase:
-    "https://github.com/taikoxyz/website/blob/main/",
+    "https://github.com/taikoxyz/website/blob/main",
   editLink: {
     text: "Edit this page 📝",
   },
