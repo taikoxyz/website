@@ -19,7 +19,7 @@ export default {
   },
   darkMode: false,
   docsRepositoryBase:
-    "https://github.com/taikoxyz/taiko-mono/blob/main/packages/website",
+    "https://github.com/taikoxyz/website/blob/main",
   editLink: {
     text: "Edit this page 📝",
   },
