@@ -71,7 +71,7 @@ This guide will help get your contract verified on Taiko!
     git clone git@github.com:MarcusWentz/foundry-testing.git
     ```
 
-    Deploy to Taiko and verify at the same time on Routescan (with EIP-1559 gas [transaction type 1]):
+    Deploy to Taiko and verify at the same time on Taikoscan:
     ```sh
     forge create --rpc-url https://rpc.jolnir.taiko.xyz --private-key $devTestnetPrivateKey src/Contract.sol:SimpleStorage --verify --verifier etherscan --verifier-url https://api.routescan.io/v2/network/testnet/evm/167007/etherscan
     ```
