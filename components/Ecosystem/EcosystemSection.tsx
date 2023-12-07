@@ -103,6 +103,23 @@ const ecosystemData: EcosystemData[] = [
     isLive: true,
   },
   {
+    icon: "/images/ecosystem/taiko.svg",
+    name: "Bridge",
+    link: "https://bridge.jolnir.taiko.xyz",
+    description: "Bridge is a dapp that lets you bridge tokens with Taiko.",
+    filters: [],
+    isLive: true,
+  },
+  {
+    icon: "/images/ecosystem/coin98.png",
+    name: "Coin98 Super Wallet",
+    link: "https://coin98.com/wallet",
+    description:
+      "Coin98 Super Wallet is the #1 crypto super app designed to seamlessly connect a billion users to the crypto world safely and securely. We offer users across the globe a comprehensive and trusted ecosystem of essential services, including but not limited to a non-custodial, multi-chain NFT & cryptocurrency wallet, built-in DEX, Cross-chain Bridge & DApp Browser, a powerful Terminal, attractive Earn, Gift & Campaign, and others.",
+    filters: [],
+    isLive: false,
+  },
+  {
     icon: "/images/ecosystem/covalent.png",
     name: "Covalent",
     link: "https://www.covalenthq.com/",
@@ -112,19 +129,20 @@ const ecosystemData: EcosystemData[] = [
     isLive: true,
   },
   {
+    icon: "/images/ecosystem/desig.svg",
+    name: "Desig",
+    link: "https://desig.io/",
+    description:
+      "Experience the first Omnichain Smart Multisig wallet that streamlines treasury ops. Watch your funds flourish with intuitive tracking, smart allocation & insightful cashflow reports. Enjoy gasless vault control; intel-driven swap.",
+    filters: [],
+    isLive: false,
+  },
+  {
     icon: "/images/ecosystem/dottaiko.png",
     name: "DotTaiko",
     link: "https://dottaiko.me",
     description:
       "Web3 identities natively on Taiko blockchain, built by DotNames.",
-    filters: [],
-    isLive: true,
-  },
-  {
-    icon: "/images/ecosystem/taiko.svg",
-    name: "Bridge",
-    link: "https://bridge.jolnir.taiko.xyz",
-    description: "Bridge is a dapp that lets you bridge tokens with Taiko.",
     filters: [],
     isLive: true,
   },
@@ -258,6 +276,15 @@ const ecosystemData: EcosystemData[] = [
     link: "https://goneuron.xyz/",
     description:
       "neuron is a blazing fast privacy focused cross-chain bridge for transferring Ethereum native assets quickly and privately between chains faster than L1 native bridges cheaply.",
+    filters: [],
+    isLive: true,
+  },
+  {
+    icon: "/images/ecosystem/nexterfinance.png",
+    name: "Nexter Finance",
+    link: "http://app.nexter.fi",
+    description:
+      "The Only Multi-chain No-Loss Prediction Market 🔮 | Binary Options, Prediction Vaults, Quests & more",
     filters: [],
     isLive: true,
   },
@@ -429,6 +456,15 @@ const ecosystemData: EcosystemData[] = [
       "User can easily compare and swap multiple chains on top of the Taiko blockchain. A service that links multiple swaps and organizes multiple tokens.",
     filters: [],
     isLive: true,
+  },
+  {
+    icon: "/images/ecosystem/rangoexchange.png",
+    name: "Rango Exchange",
+    link: "https://rango.exchange/",
+    description:
+      "Cross-chain DEX & Bridge aggregator supporting 60+ chains, including BTC, EVM chains, Cosmos chains, Solana, Starknet, Tron and more!",
+    filters: [],
+    isLive: false,
   },
   {
     icon: "/images/ecosystem/rollupcodes.svg",
