@@ -85,7 +85,7 @@ This seems to be a common issue if you're using Alchemy endpoints, switching to 
 
 #### `no configuration file provided: not found`
 
-This command is searching for the docker-compose.yml file. You are in the wrong directory, `cd simple-taiko-node` and run the command again.
+This command searches for the docker-compose.yml file. You are in the wrong directory, `cd simple-taiko-node` and run the command again.
 
 #### `Couldn't find env file`
 
@@ -101,7 +101,7 @@ You are missing the docker compose plugin [Installation Guide](https://docs.dock
 
 #### `taiko_client_prover_relayer not printing any logs`
 
-There could be several reasons, you can check the logs `docker compose logs -f` to make sure there are no errors but one of the most common cause for this is a typo in the `.env` file
+There could be several reasons, you can check the logs `docker compose logs -f` to make sure there are no errors but one of the most common causes for this is a typo in the `.env` file
 `ENABLE_PROVER=True/TRUE` when setting this to true `true` has to be in all lowercase or the script to start relayer won't run.
 
 #### `no contract code at given address`
