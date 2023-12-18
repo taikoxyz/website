@@ -1,42 +1,46 @@
-import "../styles.css";
-import localFont from "next/font/local";
+import '../styles.css';
+import localFont from 'next/font/local';
 
-import Script from 'next/script'
+import Script from 'next/script';
 
 export const grotesk = localFont({
-  src: "../fonts/ClashGrotesk-Semibold.woff2",
-  display: "swap",
-  variable: "--font-grotesk",
+    src: '../fonts/ClashGrotesk-Semibold.woff2',
+    display: 'swap',
+    variable: '--font-grotesk',
 });
 
 export const groteskmedium = localFont({
-  src: "../fonts/ClashGrotesk-Medium.woff2",
-  display: "swap",
-  variable: "--font-groteskmedium",
+    src: '../fonts/ClashGrotesk-Medium.woff2',
+    display: 'swap',
+    variable: '--font-groteskmedium',
 });
 
 export default function App({ Component, pageProps }) {
 
-  return (
-    <>
-      <Script
-        strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-96XHJ533EK"
-      />
-      <Script
-        id="google-analytics"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-96XHJ533EK');
-          `,
-        }}
-      />
-      <main className={`${grotesk.variable} ${groteskmedium.variable}`}>
-        <Component {...pageProps} />
-      </main>
-  );
+    return (
+
+      <>
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-96XHJ533EK"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+                __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-96XHJ533EK');
+              `,
+            }}
+        />
+        <main className={`${grotesk.variable} ${groteskmedium.variable}`}>
+          <Component {...pageProps} />
+        </main>
+      </>
+
+    );
+
 }
