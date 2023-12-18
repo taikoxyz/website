@@ -28,6 +28,11 @@ export async function addEndpoint(endpoint: Endpoint) {
   }
 
   // Add the user_id to the endpoint data
+  if (endpoint.user_id.toLowerCase().includes("taiko")) {
+    console.error("Name cannot include Taiko.")
+    return;
+  }
+
   const endpointWithUserId = {
     ...endpoint,
     user_id: session.data.session.user.id,
@@ -47,6 +52,11 @@ export async function editEndpoint(endpoint: Endpoint) {
 
   if (!session) {
     console.error("User must be logged in to insert data");
+    return;
+  }
+
+  if (endpoint.user_id.toLowerCase().includes("taiko")) {
+    console.error("Name cannot include Taiko.")
     return;
   }
 
