@@ -1,9 +1,7 @@
 import "../styles.css";
 import localFont from "next/font/local";
 
-import { initGA, logPageView } from "../lib/analytics";
-import { useEffect } from "react";
-
+import Script from 'next/script'
 
 export const grotesk = localFont({
   src: "../fonts/ClashGrotesk-Semibold.woff2",
@@ -18,16 +16,27 @@ export const groteskmedium = localFont({
 });
 
 export default function App({ Component, pageProps }) {
-   useEffect(() => {
-    initGA(); // Initialize Google Analytics
-    logPageView(); // Log the initial page view
 
-  }, []);
   return (
     <>
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-96XHJ533EK"
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-96XHJ533EK');
+          `,
+        }}
+      />
       <main className={`${grotesk.variable} ${groteskmedium.variable}`}>
         <Component {...pageProps} />
       </main>
-    </>
   );
 }
