@@ -66,20 +66,17 @@ export default {
                     content={'/images/Taiko_social_media_preview.png'}
                 />
                 <link rel="icon" href="/images/favicon.svg" />
-                <Script
-                    strategy="afterInteractive"
-                    src="https://www.googletagmanager.com/gtag/js?id=G-96XHJ533EK"
-                />
-                <Script
-                    id="google-analytics"
-                    strategy="afterInteractive"
+                <script
+                    async
+                    src="https://www.googletagmanager.com/gtag/js?id=G-96XHJ533EK"></script>
+                <script
                     dangerouslySetInnerHTML={{
                         __html: `
-                      window.dataLayer = window.dataLayer || [];
-                      function gtag(){dataLayer.push(arguments);}
-                      gtag('js', new Date());
-                      gtag('config', 'G-96XHJ533EK');
-                    `,
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-96XHJ533EK');
+                      `,
                     }}
                 />
             </>
