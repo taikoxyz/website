@@ -73,11 +73,12 @@ export async function removeEndpoint(endpoint: Endpoint) {
   const { error } = await client
     .from("prover_market")
     .delete()
-    .eq("user_id", session.data.session.user.id) // Match user_id
-    .eq("prover_name", endpoint.prover_name) // Match prover_name
-    .eq("prover_url", endpoint.prover_url) // Match prover_url
-    .eq("prover_fee", endpoint.prover_fee); // Match prover_fee
-
+    .match({
+      user_id: endpoint.user_id,
+      prover_name: endpoint.prover_name,
+      prover_url: endpoint.prover_url,
+      prover_fee: endpoint.prover_fee,
+    });
   if (error) {
     console.error("Error deleting endpoint:", error);
     return;
