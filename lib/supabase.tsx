@@ -61,3 +61,28 @@ export async function editEndpoint(endpoint: Endpoint) {
 
   return data;
 }
+
+export async function removeEndpoint(endpoint: Endpoint) {
+  let session = await client.auth.getSession();
+
+  if (!session) {
+    console.error("User must be logged in to delete data");
+    return;
+  }
+
+  const { error } = await client
+    .from("prover_market")
+    .delete()
+    .eq("user_id", session.data.session.user.id) // Match user_id
+    .eq("prover_name", endpoint.prover_name) // Match prover_name
+    .eq("prover_url", endpoint.prover_url) // Match prover_url
+    .eq("prover_fee", endpoint.prover_fee); // Match prover_fee
+
+  if (error) {
+    console.error("Error deleting endpoint:", error);
+    return;
+  }
+
+  console.log("Endpoint deleted successfully");
+}
+
