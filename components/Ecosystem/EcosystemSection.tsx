@@ -469,7 +469,7 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
-        icon: "/images/ecosystem/punkdomains.svg",
+        icon: "/images/ecosystem/punkdomains.png",
         name: "Punk Domains",
         link: "https://punk.domains/",
         description:
