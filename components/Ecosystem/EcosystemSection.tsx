@@ -631,6 +631,15 @@ const ecosystemData: EcosystemData[] = [
         isLive: false,
     },
     {
+        icon: '/images/ecosystem/xdao.png',
+        name: 'XDAO',
+        link: 'https://www.xdao.app',
+        description:
+            'XDAO is a fully customizable DAO framework for treasury management, multisig wallet and the platform for investment. DAOs on XDAO can be any-sized companies.',
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: '/images/ecosystem/xverse.png',
         name: 'Xverse',
         link: 'https://taiko-test.xverse.fi/?chain=taiko_testnet',
