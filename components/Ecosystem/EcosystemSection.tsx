@@ -373,6 +373,14 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: '/images/ecosystem/omninetwork.png',
+        name: 'Omni Network',
+        link: 'https://omni.network',
+        description: "Unification infrastructure for Ethereum's L2 ecosystem.",
+        filters: [],
+        isLive: false,
+    },
+    {
         icon: '/images/ecosystem/omnisea.png',
         name: 'Omnisea',
         link: 'https://www.omnisea.org',
