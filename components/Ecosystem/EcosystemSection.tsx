@@ -239,6 +239,15 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: '/images/ecosystem/magpieprotocol.png',
+        name: 'Magpie Protocol',
+        link: 'https://www.magpiefi.xyz',
+        description:
+            'Magpie Protocol elevates crypto trading with its easy and secure token swaps across major chains. With fast, user-friendly, and non-custodial cross-chain swaps, Magpie ensures a seamless and efficient trading experience.',
+        filters: [],
+        isLive: false,
+    },
+    {
         icon: '/images/ecosystem/metamerge.png',
         name: 'Meta Merge',
         link: 'https://www.metamerge.xyz/',
