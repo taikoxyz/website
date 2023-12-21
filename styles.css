@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 2px rgba(232, 24, 153, 0.7), 0 0 4px rgba(232, 24, 153, 0.7), 0 0 6px rgba(232, 24, 153, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 4px rgba(232, 24, 153, 0.9), 0 0 8px rgba(232, 24, 153, 0.9), 0 0 12px rgba(232, 24, 153, 0.9);
+    }
+}
+
+.glow-pulse {
+    animation: glow 1s ease-in-out infinite;
+} 
+
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.silver-gradient {
+    background: linear-gradient(45deg, #A9A9A9, #D3D3D3, #DCDCDC, #D3D3D3, #A9A9A9);
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
+}
