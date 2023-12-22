@@ -41,6 +41,10 @@ If you are not running a local prover, select another prover from the [prover ma
 You can connect to multiple provers at the same time in case a selected prover hits its max capacity.
 Note: you may need to switch provers if your selected prover hits its max capacity. 
 
+#### `error: "failed to propose transactions: failed to propose transactions: insufficient funds"`
+
+Make sure to have enough SepoliaETH on L1 to process transactions.
+
 #### `Fatal: Failed to register the Ethereum service: database contains incompatible genesis`
 
 Try to remove the node with `docker compose down -v` and then try again.
