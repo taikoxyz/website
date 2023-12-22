@@ -4,7 +4,7 @@ title: TaikoErrors
 
 ## TaikoErrors
 
-This abstract contract provides custom error declartions used in
+This abstract contract provides custom error declarations used in
 the Taiko protocol. Each error corresponds to specific situations where
 exceptions might be thrown.
 
