@@ -1,7 +1,7 @@
 // import "@/styles/app.css";
 
 import { SessionContextProvider, useUser } from "@supabase/auth-helpers-react";
-import { addEndpoint, editEndpoint, getEndpoints } from "../../lib/supabase";
+import { addEndpoint, editEndpoint, getEndpoints, removeEndpoint } from "../../lib/supabase";
 import { useEffect, useState } from "react";
 
 import type { AppProps } from "next/app";
@@ -106,6 +106,24 @@ export function ProverEndpointsTable() {
     }
   }
 
+
+  async function handleDeleteProver(proverId) {
+    if (user && user.email?.includes("@taiko.xyz") ) {
+      try {
+        const proverEndpoints = await getEndpoints();
+        const toDelete = proverEndpoints.find((endpoint) => endpoint.user_id == proverId);
+      
+        removeEndpoint(toDelete);
+        fetchProverEndpoints();
+      } catch (error) {
+        console.error(error);
+      }
+    } else {
+      console.log("Can't delete user endpoint: auth")
+    }
+  }
+
+
   async function fetchUserEndpoint() {
     try {
       const proverEndpoints = await getEndpoints();
@@ -206,15 +224,25 @@ export function ProverEndpointsTable() {
           </tr>
         </thead>
         <tbody>
-          {provers.map((prover, index) => (
-            <tr key={index}>
-              <td>{prover.prover_name}</td>
+        {provers.map((prover, index) => (
+          <tr key={index}>
+            <td>{prover.prover_name}</td>
+            <td>
+              <StyledLink href={prover.prover_url} text={prover.prover_url} />
+            </td>
+            <td>{prover.prover_fee}</td>
+            {user && user.email?.includes("@taiko.xyz") && (
               <td>
-                <StyledLink href={prover.prover_url} text={prover.prover_url} />
+                <button
+                  onClick={() => handleDeleteProver(prover.id)} 
+                  className="delete-button"
+                >
+                  Delete
+                </button>
               </td>
-              <td>{prover.prover_fee}</td>
-            </tr>
-          ))}
+            )}
+          </tr>
+        ))}
         </tbody>
       </table>
     </>

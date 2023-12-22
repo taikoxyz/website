@@ -1,24 +1,26 @@
-import "../styles.css";
-import localFont from "next/font/local";
+import '../styles.css';
+import localFont from 'next/font/local';
+
+import Script from 'next/script';
 
 export const grotesk = localFont({
-  src: "../fonts/ClashGrotesk-Semibold.woff2",
-  display: "swap",
-  variable: "--font-grotesk",
+    src: '../fonts/ClashGrotesk-Semibold.woff2',
+    display: 'swap',
+    variable: '--font-grotesk',
 });
 
 export const groteskmedium = localFont({
-  src: "../fonts/ClashGrotesk-Medium.woff2",
-  display: "swap",
-  variable: "--font-groteskmedium",
+    src: '../fonts/ClashGrotesk-Medium.woff2',
+    display: 'swap',
+    variable: '--font-groteskmedium',
 });
 
 export default function App({ Component, pageProps }) {
-  return (
-    <>
+
+    return (
       <main className={`${grotesk.variable} ${groteskmedium.variable}`}>
         <Component {...pageProps} />
       </main>
-    </>
-  );
+    );
+
 }
