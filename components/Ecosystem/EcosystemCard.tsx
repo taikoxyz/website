@@ -1,5 +1,8 @@
 function formatLink(link: string) {
-  return link.replace(/^(?:https?:\/\/)?(?:www\.)?/i, "").split("/")[0].concat(" ↗");
+  return link
+    .replace(/^(?:https?:\/\/)?(?:www\.)?/i, "")
+    .split("/")[0]
+    .concat(" ↗");
 }
 
 function EcosystemCard({ icon, name, isLive, link, description }) {
@@ -29,7 +32,9 @@ function EcosystemCard({ icon, name, isLive, link, description }) {
           Coming soon
         </div>
       )}
-      <p className="text-neutral-500 dark:text-neutral-100 font-medium mb-4">{formatLink(link)}</p>
+      <p className="text-neutral-500 dark:text-neutral-100 font-medium mb-4">
+        {formatLink(link)}
+      </p>
       <p className="text-neutral-700 dark:text-neutral-100">{description}</p>
     </a>
   );

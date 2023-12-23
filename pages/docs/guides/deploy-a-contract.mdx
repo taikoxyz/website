@@ -109,34 +109,34 @@ This guide will help you deploy a smart contract to Taiko.
 
       Create a basic Hardhat project. To initialize a Hardhat project, follow these steps :
 
-      Step 1: Initialize the Node.js project 
-      
+      Step 1: Initialize the Node.js project
+
       Use npm or yarn to initialize a Node.js project. We recommend npm 7 or later. Run the following commands in the terminal :
-      
+
       ```bash
       npm init -y
       ```
 
-      Step 2: Installing Hardhat 
-      
+      Step 2: Installing Hardhat
+
       Install Hardhat as a development dependency in your project with the following command :
 
       ```bash
       npm install --save-dev hardhat
       ```
 
-      Step 3: Initializing the Hardhat project 
-      
+      Step 3: Initializing the Hardhat project
+
       Run the following command to create a Hardhat project with minimal configuration :
-      
+
       ```bash
       npx hardhat init
       ```
 
-      You'll be presented with a menu allowing you to choose various options. 
-      
-      Choose "Create a JavaScript project". 
-      
+      You'll be presented with a menu allowing you to choose various options.
+
+      Choose "Create a JavaScript project".
+
       Hardhat will automatically create a default project configuration in a hardhat.config.js file.
 
       ![select a smart contract](/images/guides/deploy-thirdweb/thirdweb1.png)
@@ -177,22 +177,22 @@ This guide will help you deploy a smart contract to Taiko.
       ```bash
       // SPDX-License-Identifier: UNLICENSED
       pragma solidity ^0.8.9;
- 
+
       contract Storage {
         address payable public owner;
         uint256 public num;
- 
+
         event Stored(uint amount);
- 
+
         constructor() payable {
           owner = payable(msg.sender);
         }
- 
+
       function StoreNum(uint256 _num) public{
         num=_num;
         emit Stored(num);
         }
-  
+
       }
       ```
 

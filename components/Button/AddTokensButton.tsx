@@ -36,7 +36,10 @@ const addTokensToWallet = async ({ network }: AddTokensButtonProps) => {
     try {
       await switchOrAddChain(network);
     } catch (error) {
-      alert("Failed to switch the network with wallet_switchEthereumNetwork. Error log: " + error.message);
+      alert(
+        "Failed to switch the network with wallet_switchEthereumNetwork. Error log: " +
+          error.message
+      );
       return;
     }
   }

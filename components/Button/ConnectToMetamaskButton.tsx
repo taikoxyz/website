@@ -1,7 +1,4 @@
-import {
-  SEPOLIA_CONFIG,
-  TAIKO_CONFIG,
-} from "../../domain/chain";
+import { SEPOLIA_CONFIG, TAIKO_CONFIG } from "../../domain/chain";
 
 import { switchOrAddChain } from "../../utils/switchOrAddChain";
 

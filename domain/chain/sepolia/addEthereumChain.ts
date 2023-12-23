@@ -9,4 +9,3 @@ export const SEPOLIA_ADD_ETHEREUM_CHAIN: AddEthereumChainParameter = {
   blockExplorerUrls: [SEPOLIA_CONFIG.blockExplorer.url],
   iconUrls: [],
 };
-

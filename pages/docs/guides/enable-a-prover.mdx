@@ -27,7 +27,7 @@ nano .env
   stored in plain text in the `.env` file, and this is not secure. There is a
   real risk of losing your assets. You should **only use a test account**.
 
-  To generate an isolated burner wallet locally:
+To generate an isolated burner wallet locally:
 
   <Tabs items={["foundry", "ethers.js"]} defaultIndex="0">
     <Tab>
@@ -49,18 +49,17 @@ nano .env
       console.log("Address: " + wallet.address);
       ```
     </Tab>
+
   </Tabs> 
 </Callout>
 
 Open the `.env` file and set the following environment variables to enable your node as a prover:
 
 <Callout type="error">
-  For `L1_PROVER_PRIVATE_KEY` 
-  make sure your private key is in hexadecimal format and with the `0x` prefix removed!
-  Otherwise you will get this error in your prover status logs:
-  ```
-  simple-taiko-node-taiko_client_prover_relayer-1  | invalid L1 prover private key: invalid length, need 256 bits
-  ```
+  For `L1_PROVER_PRIVATE_KEY` make sure your private key is in hexadecimal
+  format and with the `0x` prefix removed! Otherwise you will get this error in
+  your prover status logs: ``` simple-taiko-node-taiko_client_prover_relayer-1 |
+  invalid L1 prover private key: invalid length, need 256 bits ```
 </Callout>
 
 - Set `ENABLE_PROVER` to `true`
@@ -125,8 +124,8 @@ Add your prover to the [prover registration page](/docs/reference/prover-market-
 
 ## Tokenomics
 
-When a prover receives a block from a proposer, the prover must bond TTKOj tokens to the TaikoL1 contract. 
-Once TTKOj is bonded, a countdown is started to prove the block. 
+When a prover receives a block from a proposer, the prover must bond TTKOj tokens to the TaikoL1 contract.
+Once TTKOj is bonded, a countdown is started to prove the block.
 
 ✅ If the prover is successful in proving the block in time, the prover will receive their bond back with additional TTKOj rewards.
 
@@ -135,8 +134,9 @@ Then a new prover will be given the chance to prove that block with the remainin
 
 🛒 A prover market has been added with testnet Jolnir.
 This gives proposers the ability to pick provers based on:
+
 ```
--fees paid in ETH 
+-fees paid in ETH
 -competitive proving speed (reported from community reputation)
 ```
 
