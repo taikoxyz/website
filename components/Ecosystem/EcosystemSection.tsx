@@ -122,6 +122,14 @@ const ecosystemData: EcosystemData[] = [
         isLive: false,
     },
     {
+        icon: "/images/ecosystem/cookbook.png",
+        name: "cookbook.dev",
+        link: "https://cookbook.dev",
+        description: "Cookbook is an open-source smart contract registry where developers can find solidity primitives, libraries, and smart contracts for protocols across EVM-compatible blockchains that rely on the solidity programming language.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/covalent.png",
         name: "Covalent",
         link: "https://www.covalenthq.com/",
