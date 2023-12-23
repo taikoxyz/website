@@ -1,7 +1,7 @@
 import { EcosystemCard } from "./EcosystemCard";
 import { useState } from "react";
 
-type Tag =
+export type Tag =
     | "all"
     | "bridge"
     | "dashboard"
@@ -33,22 +33,7 @@ const ecosystemData: EcosystemData[] = [
         link: "https://ait.tech/",
         description:
             "AIT Protocol is the first Web3 data infrastructure focusing on AI data annotations, leverages blockchain technology to deliver a trustless and cross-border labor market being strategically incentivized by crypto economics and having instant cross-nation payment settlements.",
-        tags: [
-            "a3",
-            "a5",
-            "a6",
-            "bridge",
-            "dashboard",
-            "defi",
-            "explorer",
-            "gaming",
-            "nft",
-            "oracle",
-            "wallet",
-            "zk",
-            "coming-soon",
-            "enabler",
-        ],
+        tags: ["a5"],
     },
     {
         icon: "/images/ecosystem/alphamint.png",
