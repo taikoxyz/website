@@ -67,15 +67,9 @@ If the `txList` is **valid**, the driver:
 2. Uses this `txList` and the decoded block metadata to assemble a deterministic L2 block.
 3. Directs the L2 execution engine to insert this assembled block and sets it as the current canonical chain's head via the Engine API.
 
-If the `txList` is **invalid**, the driver:
+If the `txList` is **invalid**, the driver assembles an empty L2 block with only the anchor transaction.
 
-1. Assembles an empty L2 block with only the anchor transaction.
-
-You can see more detailed information here:
-
-- Read more about block metadata [here](https://taiko.xyz/docs/concepts/creating-taiko-blocks/intrinsic-validity-functions).
-- Read more about `txList` validation rules [here](https://taiko.xyz/docs/concepts/creating-taiko-blocks/intrinsic-validity-functions).
-- Read more about the `TaikoL2.anchor` transaction and proposed block's determination [here](https://taiko.xyz/docs/concepts/proposing#anchor-transaction).
+You can see more detailed information about proposed blocks [here](https://taiko.xyz/docs/concepts/proposing).
 
 ## Process of proposing a block
 
