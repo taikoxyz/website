@@ -28,6 +28,7 @@ export async function addEndpoint(endpoint: Endpoint) {
     }
 
     // Add the user_id to the endpoint data
+
     if (endpoint.prover_name.toLowerCase().includes("taiko")) {
         console.error("Name cannot include Taiko.");
         return;
@@ -54,6 +55,7 @@ export async function editEndpoint(endpoint: Endpoint) {
         console.error("User must be logged in to insert data");
         return;
     }
+
 
     if (endpoint.prover_name.toLowerCase().includes("taiko")) {
         console.error("Name cannot include Taiko.");
