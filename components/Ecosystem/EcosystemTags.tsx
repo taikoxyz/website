@@ -3,6 +3,7 @@ import type { Tag } from "./EcosystemSection";
 type TagDataValue = {
     color: string;
     additionalStyles?: string;
+    text?: string;
 };
 
 type TagData = {
@@ -21,9 +22,13 @@ const tagData: TagData = {
     wallet: { color: "rose-500" },
     zk: { color: "neutral-500" },
     enabler: { color: "neutral-500" },
-    a3: { color: "[#E81899]" },
-    a5: { color: "[#E81899]", additionalStyles: "glow-pulse" },
-    a6: { color: "[#E81899]" },
+    a3: { color: "[#E81899]", text: "Testnet-A3" },
+    a5: {
+        color: "[#E81899]",
+        text: "Testnet-A5",
+        additionalStyles: "glow-pulse",
+    },
+    a6: { color: "[#E81899]", text: "Testnet-A6" },
     "coming-soon": { color: "neutral-500" },
     all: { color: "green-500" },
 };
@@ -33,14 +38,18 @@ function EcosystemTags({ tags }) {
     return (
         <div className="flex flex-wrap gap-2">
             {tags.map((tag) => {
-                const { color, additionalStyles = "" } = tagData[tag] || {
+                const {
+                    color,
+                    additionalStyles = "",
+                    text,
+                } = tagData[tag] || {
                     color: "neutral-500",
                 };
                 return (
                     <Tag
                         key={tag}
                         color={color}
-                        text={tag}
+                        text={text ? text : tag}
                         additionalStyles={additionalStyles}
                     />
                 );
