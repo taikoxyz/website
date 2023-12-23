@@ -1,7 +1,12 @@
 // import "@/styles/app.css";
 
 import { SessionContextProvider, useUser } from "@supabase/auth-helpers-react";
-import { addEndpoint, editEndpoint, getEndpoints, removeEndpoint } from "../../lib/supabase";
+import {
+  addEndpoint,
+  editEndpoint,
+  getEndpoints,
+  removeEndpoint,
+} from "../../lib/supabase";
 import { useEffect, useState } from "react";
 
 import type { AppProps } from "next/app";
@@ -27,6 +32,8 @@ export function ProverEndpointsTable() {
   const [proverName, setProverName] = useState("");
   const [newProverFee, setNewProverFee] = useState("");
   const [proverExist, setProverExist] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const user = useUser();
 
@@ -55,29 +62,47 @@ export function ProverEndpointsTable() {
 
     if (!proverExist) {
       try {
-        await addEndpoint({
+        let { validation_error, error } = await addEndpoint({
           prover_name: proverName,
           prover_url: newProverEndpoint,
           prover_fee: Number(newProverFee),
         });
 
+        if (validation_error) {
+          setErrorMessage(validation_error);
+          return;
+        }
+
         // Success: refresh data and show toast?
         fetchProverEndpoints();
         // Show success toast
+        if (!error) {
+          setSuccessMessage("Prover endpoint added successfully");
+          setErrorMessage("");
+        }
       } catch (error) {
         console.error(error);
         // Show error as a toast message
       }
     } else {
       try {
-        await editEndpoint({
+        let { validation_error, error } = await editEndpoint({
           prover_name: proverName,
           prover_url: newProverEndpoint,
           prover_fee: Number(newProverFee),
         });
 
+        if (validation_error) {
+          setErrorMessage(validation_error);
+          return;
+        }
+
         // Success: refresh data and show toast?
         fetchProverEndpoints();
+        if (!error) {
+          setSuccessMessage("Prover endpoint updated successfully");
+          setErrorMessage("");
+        }
       } catch (error) {
         console.error(error);
         // Show error as a toast message
@@ -91,7 +116,6 @@ export function ProverEndpointsTable() {
       setProvers(proverEndpoints.sort((a, b) => b.prover_fee - a.prover_fee));
 
       // Find user's endpoint if it exists and set as newProverEndpoint
-
       const userEndpoint = proverEndpoints.find(
         (endpoint) => endpoint.user_id === user.id
       );
@@ -106,23 +130,23 @@ export function ProverEndpointsTable() {
     }
   }
 
-
   async function handleDeleteProver(proverId) {
-    if (user && user.email?.includes("@taiko.xyz") ) {
+    if (user && user.email?.includes("@taiko.xyz")) {
       try {
         const proverEndpoints = await getEndpoints();
-        const toDelete = proverEndpoints.find((endpoint) => endpoint.user_id == proverId);
-      
+        const toDelete = proverEndpoints.find(
+          (endpoint) => endpoint.user_id == proverId
+        );
+
         removeEndpoint(toDelete);
         fetchProverEndpoints();
       } catch (error) {
         console.error(error);
       }
     } else {
-      console.log("Can't delete user endpoint: auth")
+      console.log("Can't delete user endpoint: auth");
     }
   }
-
 
   async function fetchUserEndpoint() {
     try {
@@ -180,8 +204,7 @@ export function ProverEndpointsTable() {
       {user && (
         <form
           className="flex justify-between items-center gap-1"
-          onSubmit={(e) => addOrEditProverEndpoint(e)}
-        >
+          onSubmit={(e) => addOrEditProverEndpoint(e)}>
           <input
             value={proverName}
             onChange={(e) => setProverName(e.target.value)}
@@ -203,13 +226,17 @@ export function ProverEndpointsTable() {
 
           <button
             className="hover:cursor-pointer text-neutral-100 bg-[#E81899] hover:bg-[#d1168a] border-solid border-neutral-200 focus:ring-4 focus:outline-none focus:ring-neutral-100 font-medium rounded-md text-sm my-3 py-1.5 px-1 text-center whitespace-nowrap"
-            type="submit"
-          >
+            type="submit">
             {!proverExist ? "Add prover pool" : "Edit prover pool"}
           </button>
         </form>
       )}
-
+      {errorMessage && (
+        <div className="text-red-500 text-sm">{errorMessage}</div>
+      )}
+      {successMessage && (
+        <div className="text-white-500 text-sm">{successMessage}</div>
+      )}
       <table className="table-auto w-full text-center mt-8">
         <thead>
           <tr>
@@ -217,32 +244,30 @@ export function ProverEndpointsTable() {
             <th>Prover Endpoint</th>
             <th
               className="cursor-pointer"
-              onClick={() => sortData("prover_fee")}
-            >
+              onClick={() => sortData("prover_fee")}>
               Prover Fee {renderSortArrow("prover_fee")}
             </th>
           </tr>
         </thead>
         <tbody>
-        {provers.map((prover, index) => (
-          <tr key={index}>
-            <td>{prover.prover_name}</td>
-            <td>
-              <StyledLink href={prover.prover_url} text={prover.prover_url} />
-            </td>
-            <td>{prover.prover_fee}</td>
-            {user && user.email?.includes("@taiko.xyz") && (
+          {provers.map((prover, index) => (
+            <tr key={index}>
+              <td>{prover.prover_name}</td>
               <td>
-                <button
-                  onClick={() => handleDeleteProver(prover.id)} 
-                  className="delete-button"
-                >
-                  Delete
-                </button>
+                <StyledLink href={prover.prover_url} text={prover.prover_url} />
               </td>
-            )}
-          </tr>
-        ))}
+              <td>{prover.prover_fee}</td>
+              {user && user.email?.includes("@taiko.xyz") && (
+                <td>
+                  <button
+                    onClick={() => handleDeleteProver(prover.id)}
+                    className="delete-button">
+                    Delete
+                  </button>
+                </td>
+              )}
+            </tr>
+          ))}
         </tbody>
       </table>
     </>
