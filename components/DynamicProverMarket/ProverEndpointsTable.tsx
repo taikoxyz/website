@@ -204,7 +204,8 @@ export function ProverEndpointsTable() {
       {user && (
         <form
           className="flex justify-between items-center gap-1"
-          onSubmit={(e) => addOrEditProverEndpoint(e)}>
+          onSubmit={(e) => addOrEditProverEndpoint(e)}
+        >
           <input
             value={proverName}
             onChange={(e) => setProverName(e.target.value)}
@@ -226,7 +227,8 @@ export function ProverEndpointsTable() {
 
           <button
             className="hover:cursor-pointer text-neutral-100 bg-[#E81899] hover:bg-[#d1168a] border-solid border-neutral-200 focus:ring-4 focus:outline-none focus:ring-neutral-100 font-medium rounded-md text-sm my-3 py-1.5 px-1 text-center whitespace-nowrap"
-            type="submit">
+            type="submit"
+          >
             {!proverExist ? "Add prover pool" : "Edit prover pool"}
           </button>
         </form>
@@ -244,7 +246,8 @@ export function ProverEndpointsTable() {
             <th>Prover Endpoint</th>
             <th
               className="cursor-pointer"
-              onClick={() => sortData("prover_fee")}>
+              onClick={() => sortData("prover_fee")}
+            >
               Prover Fee {renderSortArrow("prover_fee")}
             </th>
           </tr>
@@ -261,7 +264,8 @@ export function ProverEndpointsTable() {
                 <td>
                   <button
                     onClick={() => handleDeleteProver(prover.id)}
-                    className="delete-button">
+                    className="delete-button"
+                  >
                     Delete
                   </button>
                 </td>

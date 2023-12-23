@@ -30,7 +30,7 @@ nano .env
   stored in plain text in the `.env` file, and this is not secure. There is a
   real risk of losing your assets. You should **only use a test account**.
 
-  To generate an isolated burner wallet locally:
+To generate an isolated burner wallet locally:
 
   <Tabs items={["foundry", "ethers.js"]} defaultIndex="0">
     <Tab>
@@ -52,18 +52,17 @@ nano .env
       console.log("Address: " + wallet.address);
       ```
     </Tab>
+
   </Tabs> 
 </Callout>
 
 Set the following environment variables to enable your node as a proposer:
 
 <Callout type="error">
-  For `L1_PROPOSER_PRIVATE_KEY` 
-  make sure your private key is in hexadecimal format and with the `0x` prefix removed!
-  Otherwise you will get this error in your proposer status logs:
-  ```
-  simple-taiko-node-taiko_client_proposer-1  | invalid L1 proposer private key: invalid length, need 256 bits
-  ```
+  For `L1_PROPOSER_PRIVATE_KEY` make sure your private key is in hexadecimal
+  format and with the `0x` prefix removed! Otherwise you will get this error in
+  your proposer status logs: ``` simple-taiko-node-taiko_client_proposer-1 |
+  invalid L1 proposer private key: invalid length, need 256 bits ```
 </Callout>
 
 - Set `ENABLE_PROPOSER` to `true`
@@ -79,12 +78,15 @@ If you are not running a local prover, then you can specify a prover from the [p
 - `PROVER_ENDPOINTS`
 
 To select multiple prover endpoints at the same time:
+
 ```shell
 PROVER_ENDPOINTS=<PROVER_ENDPOINT_1>,<PROVER_ENDPOINT_2>,<PROVER_ENDPOINT_3>
 ```
 
 <Callout type="warning">
-  Provers from the market will have set their own minimum fees, to make sure your proposals are accepted please set `BLOCK_PROPOSAL_FEE` equal to their listed minimum fee.
+  Provers from the market will have set their own minimum fees, to make sure
+  your proposals are accepted please set `BLOCK_PROPOSAL_FEE` equal to their
+  listed minimum fee.
 </Callout>
 
 ### Check proposer status logs
@@ -113,10 +115,12 @@ You can check all commands to see proposer logs in the [node runner manual](/doc
 
 The proposer orders (sequences) transactions in a block. Transaction fees to be included into a block are paid in ETH.
 To extract as much MEV (Maximal Extractable Value) as possible paid in ETH, each proposer will try to search the mempool to:
+
 ```
 - ✅ Fit as many valid transactions into a block as possible
 - 💰 Include transactions with the highest fees
-``` 
+```
+
 The proposer must then deliver their proposed blocks to a prover.
 
 ## Videos

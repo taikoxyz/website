@@ -21,7 +21,4 @@ export const JOLNIR_ADD_HORSE: AddTokenParameter = {
     "https://raw.githubusercontent.com/taikoxyz/taiko-mono/main/packages/branding/testnet-token-images/horse.svg",
 };
 
-export const JOLNIR_ADD_TOKENS = [
-  JOLNIR_ADD_TTKOJ,
-  JOLNIR_ADD_HORSE,
-];
+export const JOLNIR_ADD_TOKENS = [JOLNIR_ADD_TTKOJ, JOLNIR_ADD_HORSE];
