@@ -1,17 +1,18 @@
 import { Footer } from './components/Home';
-import Script from 'next/script';
-import { TAIKO_CONFIG } from './domain/chain';
 import { ThemeToggle } from './components/ThemeToggle';
 import { ThemedImage } from './components/ThemedImage';
 import { useConfig } from 'nextra-theme-docs';
 import { useRouter } from 'next/router';
 
 export default {
+    search: {
+        component: <></>, // disable search
+    },
     banner: {
         key: 'banner',
         text: (
-            <a href="/docs/guides" target="_blank">
-                📌 {TAIKO_CONFIG.names.shortName} is here! Get started →
+            <a href="#" target="_blank">
+                📌 Katla is here! Read the full blog post →
             </a>
         ),
     },

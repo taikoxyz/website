@@ -1,3 +1,8 @@
+# Todo
+
+- [ ] Add link to announcement blog post
+- [ ] Update hero links to new docs
+
 # Taiko documentation website
 
 ## Install pnpm
