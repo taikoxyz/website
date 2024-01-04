@@ -16,19 +16,19 @@
     "bridge": {
         "title": "Bridge",
         "type": "page",
-        "href": "https://bridge.katla.taiko.xyz",
+        "href": "https://bridge.jolnir.taiko.xyz",
         "newWindow": true
     },
     "swap": {
         "title": "Swap",
         "type": "page",
-        "href": "https://swap.katla.taiko.xyz",
+        "href": "https://swap.jolnir.taiko.xyz",
         "newWindow": true
     },
     "block-explorer": {
         "title": "Explorer",
         "type": "page",
-        "href": "https://explorer.katla.taiko.xyz",
+        "href": "https://explorer.jolnir.taiko.xyz",
         "newWindow": true
     },
     "ecosystem": {
