@@ -125,7 +125,8 @@ const ecosystemData: EcosystemData[] = [
         icon: "/images/ecosystem/cookbook.png",
         name: "cookbook.dev",
         link: "https://cookbook.dev",
-        description: "Cookbook is an open-source smart contract registry where developers can find solidity primitives, libraries, and smart contracts for protocols across EVM-compatible blockchains that rely on the solidity programming language.",
+        description:
+            "Cookbook is an open-source smart contract registry where developers can find solidity primitives, libraries, and smart contracts for protocols across EVM-compatible blockchains that rely on the solidity programming language.",
         filters: [],
         isLive: true,
     },
@@ -243,6 +244,15 @@ const ecosystemData: EcosystemData[] = [
         link: "https://izar.xyz/",
         description:
             "IZAR is a privacy-preserving interoperability protocol between Ethereum and Aleo ecosystem, harnessing the power of zero-knowledge cryptography to protect user privacy and security.",
+        filters: [],
+        isLive: true,
+    },
+    {
+        icon: "/images/ecosystem/imtoken.png",
+        name: "imToken",
+        link: "https://token.im/",
+        description:
+            "imToken, a reliable non-custodial mobile wallet for tokens you own - cryptocurrencies, stable coins, NFTs, and more.",
         filters: [],
         isLive: true,
     },
