@@ -109,7 +109,7 @@ export const JOLNIR_CONFIG = {
     erc4337Entrypoint: {
       name: "ERC-4337 Entrypoint",
       address: {
-        impl: "0x4e59b44847b379578588920ca78fbf26c0b4956c",
+        impl: "0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789",
       },
     },
     weth: {
