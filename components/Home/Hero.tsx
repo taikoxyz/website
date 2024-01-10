@@ -2,15 +2,27 @@ import React, { useEffect } from "react";
 
 export function Hero() {
     useEffect(() => {
+        // Calculate the initial baseline width
+        const baselineWidth =
+            window.innerWidth < 500
+                ? window.innerWidth * 0.85
+                : window.innerWidth / 2;
+
         const calculateWidthAndOpacity = () => {
             const elementHeight = window.scrollY;
             let width, opacity;
 
             if (window.innerWidth < 500) {
-                width = window.innerWidth * 0.85 + elementHeight * 9;
+                width = Math.max(
+                    baselineWidth,
+                    window.innerWidth * 0.85 + elementHeight * 9
+                );
                 opacity = Math.max(0, 1 - elementHeight * 0.003);
             } else {
-                width = window.innerWidth / 2 + elementHeight * 9;
+                width = Math.max(
+                    baselineWidth,
+                    window.innerWidth / 2 + elementHeight * 9
+                );
                 opacity = Math.max(0, 1 - elementHeight / 250);
             }
 
