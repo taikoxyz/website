@@ -19,6 +19,7 @@ export default {
     chat: {
         link: "https://discord.gg/taikoxyz",
     },
+    gitTimestamp: <></>,
     darkMode: false,
     docsRepositoryBase: "https://github.com/taikoxyz/website/blob/main",
     editLink: {

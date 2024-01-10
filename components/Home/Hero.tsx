@@ -1,37 +1,32 @@
+import React, { useEffect } from "react";
+
 export function Hero() {
-    // Enlarges and decreases the opacity of the taikoGeom image upon scroll
-    if (typeof window !== "undefined") {
+    useEffect(() => {
+        const calculateWidthAndOpacity = () => {
+            const elementHeight = window.scrollY;
+            let width, opacity;
+
+            if (window.innerWidth < 500) {
+                width = window.innerWidth * 0.85 + elementHeight * 9;
+                opacity = Math.max(0, 1 - elementHeight * 0.003);
+            } else {
+                width = window.innerWidth / 2 + elementHeight * 9;
+                opacity = Math.max(0, 1 - elementHeight / 250);
+            }
+
+            return { width, opacity };
+        };
+
         const changeTaikoGeom = () => {
-            // only do animation on home page
-            if (window.location.pathname !== "/") {
+            const taikoGeom = document.getElementById("taikoGeom");
+            const taikoGeomParent = document.getElementById("taikoGeomParent");
+
+            // Ensure the elements are found
+            if (!taikoGeom || !taikoGeomParent) {
                 return;
             }
 
-            const taikoGeom = document.getElementById("taikoGeom");
-            const taikoGeomParent = document.getElementById("taikoGeomParent");
-            const elementHeight = window.scrollY;
-
-            // Calculate width and opacity based on screen width and scroll position
-            const calculateWidthAndOpacity = () => {
-                let width, opacity;
-
-                if (window.innerWidth.valueOf() < 500) {
-                    // Slightly reduce the multiplier or the constant to decrease initial size
-                    width =
-                        window.innerWidth.valueOf() * 0.85 + elementHeight * 9; // Adjusted values
-                    opacity = 1 - elementHeight * 0.003;
-                    opacity = opacity >= 0 ? opacity * opacity : 0;
-                } else {
-                    width = window.innerWidth.valueOf() / 2 + elementHeight * 9;
-                    opacity = 1 - elementHeight / 250;
-                }
-
-                return { width, opacity };
-            };
-
             const { width, opacity } = calculateWidthAndOpacity();
-
-            // Set width and opacity
             taikoGeomParent.style.width = `${width}px`;
             taikoGeom.style.opacity = `${opacity}`;
         };
@@ -41,7 +36,12 @@ export function Hero() {
 
         // Update state on scroll
         window.addEventListener("scroll", changeTaikoGeom);
-    }
+
+        // Clean up the event listener
+        return () => {
+            window.removeEventListener("scroll", changeTaikoGeom);
+        };
+    }, []);
 
     return (
         <div className="mx-auto max-w-[90rem] px-3">
