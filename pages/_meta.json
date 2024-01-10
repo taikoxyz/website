@@ -8,27 +8,21 @@
         }
     },
     "docs": {
-        "title": "Docs",
+        "title": "Docs ↗",
         "type": "page",
         "href": "https://docs.taiko.xyz",
         "newWindow": true
     },
     "bridge": {
-        "title": "Bridge",
+        "title": "Bridge ↗",
         "type": "page",
         "href": "https://bridge.jolnir.taiko.xyz",
         "newWindow": true
     },
     "swap": {
-        "title": "Swap",
+        "title": "Swap ↗",
         "type": "page",
         "href": "https://swap.jolnir.taiko.xyz",
-        "newWindow": true
-    },
-    "block-explorer": {
-        "title": "Explorer",
-        "type": "page",
-        "href": "https://explorer.jolnir.taiko.xyz",
         "newWindow": true
     },
     "ecosystem": {
@@ -38,16 +32,31 @@
             "layout": "full"
         }
     },
-    "blog": {
-        "title": "Blog",
-        "type": "page",
-        "href": "https://mirror.xyz/labs.taiko.eth",
-        "newWindow": true
+    "status": {
+        "title": "Status",
+        "type": "menu",
+        "items": {
+            "status-1": {
+                "title": "Rollup Status Page ↗",
+                "href": "https://status.taiko.xyz",
+                "newWindow": true
+            },
+            "status-2": {
+                "title": "Guardian Prover Status Page ↗",
+                "href": "https://guardian-prover.katla.taiko.xyz",
+                "newWindow": true
+            }
+        }
     },
-    "forum": {
-        "title": "Forum",
-        "type": "page",
-        "href": "https://community.taiko.xyz/",
-        "newWindow": true
+    "block-explorer": {
+        "title": "Explorer",
+        "type": "menu",
+        "items": {
+            "block-explorer-1": {
+                "title": "Blockscout Block Explorer ↗",
+                "href": "https://explorer.katla.taiko.xyz",
+                "newWindow": true
+            }
+        }
     }
 }

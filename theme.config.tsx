@@ -12,7 +12,7 @@ export default {
         key: 'banner',
         text: (
             <a href="#" target="_blank">
-                📌 TODO is here! Read the full blog post →
+                📌 Katla is here! Read the full blog post →
             </a>
         ),
     },
