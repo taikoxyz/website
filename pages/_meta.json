@@ -16,13 +16,13 @@
     "bridge": {
         "title": "Bridge ↗",
         "type": "page",
-        "href": "https://bridge.jolnir.taiko.xyz",
+        "href": "https://bridge.katla.taiko.xyz",
         "newWindow": true
     },
     "swap": {
         "title": "Swap ↗",
         "type": "page",
-        "href": "https://swap.jolnir.taiko.xyz",
+        "href": "https://swap.katla.taiko.xyz",
         "newWindow": true
     },
     "ecosystem": {
