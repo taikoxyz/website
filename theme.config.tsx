@@ -8,14 +8,14 @@ export default {
     search: {
         component: <></>, // disable search
     },
-    banner: {
-        key: "banner",
-        text: (
-            <a href="#" target="_blank">
-                📌 Katla is here! Read the full blog post →
-            </a>
-        ),
-    },
+    // banner: {
+    //     key: "banner",
+    //     text: (
+    //         <a href="#" target="_blank">
+    //             📌 Katla is here! Read the full blog post →
+    //         </a>
+    //     ),
+    // },
     chat: {
         link: "https://discord.gg/taikoxyz",
     },

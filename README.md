@@ -1,9 +1,3 @@
-# Todo
-
-- [ ] Add link to announcement blog post
-- [ ] Update hero links to new docs
-- [ ] Update navbar links
-
 # Taiko homepage website
 
 ## Install pnpm
