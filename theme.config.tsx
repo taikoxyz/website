@@ -8,14 +8,16 @@ export default {
     search: {
         component: <></>, // disable search
     },
-    // banner: {
-    //     key: "banner",
-    //     text: (
-    //         <a href="#" target="_blank">
-    //             📌 Katla is here! Read the full blog post →
-    //         </a>
-    //     ),
-    // },
+    banner: {
+        key: "banner",
+        text: (
+            <a
+                href="https://taiko.mirror.xyz/a5SHfg_V16TOVS_LpFgrbfgi_shwC5HhpPZ5C2hnuFo"
+                target="_blank">
+                📌 Katla is here! Read the full blog post →
+            </a>
+        ),
+    },
     chat: {
         link: "https://discord.gg/taikoxyz",
     },
