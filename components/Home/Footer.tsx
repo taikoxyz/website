@@ -43,7 +43,7 @@ export function Footer() {
             </h2>
             <ul className="text-neutral-500 dark:text-neutral-400">
               <li className="mb-4">
-                <a href="/docs" className="hover:underline">
+                <a href="https://docs.taiko.xyz" className="hover:underline">
                   Get started
                 </a>
               </li>
@@ -79,6 +79,15 @@ export function Footer() {
                   target={"_blank"}
                 >
                   Discord
+                </a>
+              </li>
+              <li className="mb-4">
+                <a
+                  href="https://community.taiko.xyz"
+                  className="hover:underline"
+                  target={"_blank"}
+                >
+                  Forum
                 </a>
               </li>
               <li className="mb-4">

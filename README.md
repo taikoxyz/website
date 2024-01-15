@@ -1,4 +1,4 @@
-# Taiko documentation website
+# Taiko homepage website
 
 ## Install pnpm
 
