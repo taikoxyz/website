@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* clean up nav bar */
+nav a,
+nav div button {
+    font-size: 1rem !important;
+}
+
+.nextra-nav-container nav a:nth-child(2):not([role="menuitem"]),
+.nextra-nav-container nav a:nth-child(3),
+.nextra-nav-container nav a:nth-child(4),
+.nextra-nav-container nav a:nth-child(5) {
+    padding-left: 15px;
+}

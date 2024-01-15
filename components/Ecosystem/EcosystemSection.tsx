@@ -107,7 +107,7 @@ const ecosystemData: EcosystemData[] = [
     {
         icon: "/images/ecosystem/taiko.svg",
         name: "Bridge",
-        link: "https://bridge.jolnir.taiko.xyz",
+        link: "https://bridge.katla.taiko.xyz",
         description: "Bridge is a dapp that lets you bridge tokens with Taiko.",
         filters: [],
         isLive: true,
@@ -576,19 +576,10 @@ const ecosystemData: EcosystemData[] = [
     },
     {
         icon: "/images/ecosystem/taiko.svg",
-        name: "Swap v2",
-        link: "https://swap.jolnir.taiko.xyz",
+        name: "Swap",
+        link: "https://swap.katla.taiko.xyz",
         description:
-            "Swap v2 is a dapp that lets you swap tokens on Taiko (fork of Uniswap v2).",
-        filters: [],
-        isLive: true,
-    },
-    {
-        icon: "/images/ecosystem/taiko.svg",
-        name: "Swap v3",
-        link: "https://swap-v3.jolnir.taiko.xyz",
-        description:
-            "Swap v3 is a dapp that lets you swap tokens on Taiko (fork of Uniswap v3).",
+            "Swap is a dapp that lets you swap tokens on Taiko (fork of Uniswap v3).",
         filters: [],
         isLive: true,
     },

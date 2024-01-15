@@ -1,36 +1,38 @@
-import { Footer } from './components/Home';
-import Script from 'next/script';
-import { TAIKO_CONFIG } from './domain/chain';
-import { ThemeToggle } from './components/ThemeToggle';
-import { ThemedImage } from './components/ThemedImage';
-import { useConfig } from 'nextra-theme-docs';
-import { useRouter } from 'next/router';
+import { Footer } from "./components/Home";
+import { ThemeToggle } from "./components/ThemeToggle";
+import { ThemedImage } from "./components/ThemedImage";
+import { useConfig } from "nextra-theme-docs";
+import { useRouter } from "next/router";
 
 export default {
+    search: {
+        component: <></>, // disable search
+    },
     banner: {
-        key: 'banner',
+        key: "banner",
         text: (
-            <a href="/docs/guides" target="_blank">
-                📌 {TAIKO_CONFIG.names.shortName} is here! Get started →
+            <a href="#" target="_blank">
+                📌 Katla is here! Read the full blog post →
             </a>
         ),
     },
     chat: {
-        link: 'https://discord.gg/taikoxyz',
+        link: "https://discord.gg/taikoxyz",
     },
+    gitTimestamp: <></>,
     darkMode: false,
-    docsRepositoryBase: 'https://github.com/taikoxyz/website/blob/main',
+    docsRepositoryBase: "https://github.com/taikoxyz/website/blob/main",
     editLink: {
-        text: 'Edit this page 📝',
+        text: "Edit this page 📝",
     },
     feedback: {
         content: (
             <button
                 onClick={() => {
                     const win = window.open(
-                        'https://forms.gle/TAnV1xLmFwH13ryj7',
-                        '_blank',
-                        'noopener,noreferrer'
+                        "https://forms.gle/TAnV1xLmFwH13ryj7",
+                        "_blank",
+                        "noopener,noreferrer"
                     );
                     if (win) win.opener = null;
                 }}>
@@ -52,18 +54,18 @@ export default {
                 />
                 <meta
                     property="og:title"
-                    content={frontMatter.title || 'Taiko'}
+                    content={frontMatter.title || "Taiko"}
                 />
                 <meta
                     property="og:description"
                     content={
                         frontMatter.description ||
-                        'A decentralized, Ethereum-equivalent ZK-Rollup.'
+                        "A decentralized, Ethereum-equivalent ZK-Rollup."
                     }
                 />
                 <meta
                     property="og:image"
-                    content={'/images/Taiko_social_media_preview.png'}
+                    content={"/images/Taiko_social_media_preview.png"}
                 />
                 <link rel="icon" href="/images/favicon.svg" />
                 <script
@@ -91,15 +93,15 @@ export default {
         ),
     },
     nextThemes: {
-        defaultTheme: 'light',
+        defaultTheme: "light",
     },
     primaryHue: 323,
     project: {
-        link: 'https://github.com/taikoxyz',
+        link: "https://github.com/taikoxyz",
     },
     useNextSeoProps() {
         return {
-            titleTemplate: '%s – Taiko',
+            titleTemplate: "%s – Taiko",
         };
     },
     sidebar: {
