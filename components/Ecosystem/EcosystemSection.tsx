@@ -265,6 +265,15 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/looperlands.png",
+        name: "Looper Lands",
+        link: "https://LooperLands.io",
+        description:
+            "Pixelverse with multiple worlds, user-generated content, with co-op solo PvE and PvP.",
+        filters: [],
+        isLive: false,
+    },
+    {
         icon: "/images/ecosystem/magpieprotocol.png",
         name: "Magpie Protocol",
         link: "https://www.magpiefi.xyz",
