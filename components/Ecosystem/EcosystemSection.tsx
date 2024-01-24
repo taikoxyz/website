@@ -248,6 +248,15 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/l2faucet.png",
+        name: "L2 Faucet",
+        link: "https://www.l2faucet.com/",
+        description:
+            "L2 Faucet allows users to attest their devices to receive testnet tokens directly without bridging, social verification or downloads. Powered by Automata Network.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/magpieprotocol.png",
         name: "Magpie Protocol",
         link: "https://www.magpiefi.xyz",
