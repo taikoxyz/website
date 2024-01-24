@@ -60,6 +60,15 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/bigint.png",
+        name: "BigInt Nft Marketplace",
+        link: "https://taiko.bigint.co",
+        description:
+            "BigInt is a community-focused NFT marketplace. BigInt offers a comprehensive platform where you can not only buy and sell NFTs but also engage with the community and projects. Beyond being just an NFT marketplace, our users can explore different projects, communicate directly with artists, share their ideas, and participate in community events. Thus, you can not only trade NFTS, but also actively contribute to the development of the art world as part of a growing community.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/bitget.png",
         name: "Bitget Wallet",
         link: "https://web3.bitget.com/",
