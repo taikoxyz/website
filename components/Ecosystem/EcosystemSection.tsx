@@ -96,6 +96,14 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/cryptorumble.png",
+        name: "CryptoRumble",
+        link: "https://test.zypher.game/CryptoRumble/",
+        description: "Full on-chain game implemented with ZKP technology.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/taiko.svg",
         name: "Bridge",
         link: "https://bridge.jolnir.taiko.xyz",
