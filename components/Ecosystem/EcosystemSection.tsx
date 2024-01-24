@@ -24,6 +24,15 @@ interface EcosystemData {
 
 const ecosystemData: EcosystemData[] = [
     {
+        icon: "/images/ecosystem/1rpc.png",
+        name: "1RPC",
+        link: "https://www.1rpc.io/",
+        description:
+            "1RPC is a free RPC relay to eradicate metadata exposure and leakage with a one-click experience for Web3 users. Powered by Automata Network.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/ait.png",
         name: "AIT Protocol",
         link: "https://ait.tech/",
