@@ -363,6 +363,15 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/micro3.png",
+        name: "Micro3",
+        link: "https://testnet.micro3.io/taikotestnet/0x626a24a8e34804b3ac0efc68b56c880ab6b4e01f",
+        description:
+            "Micro3 is a decentralized SocialFi NFT platform empowering the community, integrating SocialFi and NFT, utilizing #LayerZero and #Chainlink technologies.",
+        filters: ["nft"],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/morkie.png",
         name: "Morkie",
         link: "https://www.morkie.xyz/",
