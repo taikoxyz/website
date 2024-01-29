@@ -24,6 +24,15 @@ interface EcosystemData {
 
 const ecosystemData: EcosystemData[] = [
     {
+        icon: "/images/ecosystem/1rpc.png",
+        name: "1RPC",
+        link: "https://www.1rpc.io/",
+        description:
+            "1RPC is a free RPC relay to eradicate metadata exposure and leakage with a one-click experience for Web3 users. Powered by Automata Network.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/ait.png",
         name: "AIT Protocol",
         link: "https://ait.tech/",
@@ -51,11 +60,11 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
-        icon: "/images/ecosystem/automatanetwork.png",
-        name: "Automata Network",
-        link: "https://www.l2faucet.com/taiko",
+        icon: "/images/ecosystem/bigint.png",
+        name: "BigInt Nft Marketplace",
+        link: "https://taiko.bigint.co",
         description:
-            "Automata Network is a modular attestation layer that extends machine-level trust to Ethereum by leveraging optimistic rollups and zero-knowledge proofs in its Proof of Machinehood approach. The application-specific rollup allows on-chain verification for out-of-protocol computation, which creates an unbroken chain of trust that extends upwards through the entire Web3 stack.",
+            "BigInt is a community-focused NFT marketplace. BigInt offers a comprehensive platform where you can not only buy and sell NFTs but also engage with the community and projects. Beyond being just an NFT marketplace, our users can explore different projects, communicate directly with artists, share their ideas, and participate in community events. Thus, you can not only trade NFTS, but also actively contribute to the development of the art world as part of a growing community.",
         filters: [],
         isLive: true,
     },
@@ -101,6 +110,14 @@ const ecosystemData: EcosystemData[] = [
         link: "https://www.brianknows.org",
         description:
             "Brian is a collection of AI models, trained on web3-related data, that allows everyone to learn and interact with the decentralized world by prompting.",
+        filters: [],
+        isLive: true,
+    },
+    {
+        icon: "/images/ecosystem/cryptorumble.png",
+        name: "CryptoRumble",
+        link: "https://test.zypher.game/CryptoRumble/",
+        description: "Full on-chain game implemented with ZKP technology.",
         filters: [],
         isLive: true,
     },
@@ -257,6 +274,24 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/l2faucet.png",
+        name: "L2 Faucet",
+        link: "https://www.l2faucet.com/",
+        description:
+            "L2 Faucet allows users to attest their devices to receive testnet tokens directly without bridging, social verification or downloads. Powered by Automata Network.",
+        filters: [],
+        isLive: true,
+    },
+    {
+        icon: "/images/ecosystem/looperlands.png",
+        name: "Looper Lands",
+        link: "https://LooperLands.io",
+        description:
+            "Pixelverse with multiple worlds, user-generated content, with co-op solo PvE and PvP.",
+        filters: [],
+        isLive: false,
+    },
+    {
         icon: "/images/ecosystem/magpieprotocol.png",
         name: "Magpie Protocol",
         link: "https://www.magpiefi.xyz",
@@ -343,6 +378,15 @@ const ecosystemData: EcosystemData[] = [
         description:
             "Loopring is your mobile gateway to Ethereum L2, enabling you to easily trade, swap, collect, stake, and invest without the costly gas fees.",
         filters: [],
+        isLive: true,
+    },
+    {
+        icon: "/images/ecosystem/micro3.png",
+        name: "Micro3",
+        link: "https://testnet.micro3.io/taikotestnet/0x626a24a8e34804b3ac0efc68b56c880ab6b4e01f",
+        description:
+            "Micro3 is a decentralized SocialFi NFT platform empowering the community, integrating SocialFi and NFT, utilizing #LayerZero and #Chainlink technologies.",
+        filters: ["nft"],
         isLive: true,
     },
     {
