@@ -176,6 +176,15 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/dropx.png",
+        name: "DropX",
+        link: "https://app.stationx.network/claims",
+        description:
+            "With DropX, create public, token gated or whitelisted drops/claims for your ecosystem, project, community, friends, etc. or simply bulk distribute tokens.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/catalyst.png",
         name: "Catalyst",
         link: "https://catalyst.exchange/",
