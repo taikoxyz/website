@@ -10,6 +10,7 @@ type Category =
     | "gaming"
     | "nft"
     | "oracle"
+    | "social"
     | "wallet"
     | "zk";
 
@@ -665,6 +666,15 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/tko-chat.png",
+        name: "TKO Chat",
+        link: "https://tko.chat",
+        description:
+            "TKO Chat is the first decentralized social network on the Taiko chain.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/vooi.jpeg",
         name: "Vooi",
         link: "https://vooi.io/",
@@ -809,6 +819,11 @@ export function EcosystemSection() {
         />
         <FilterLabel
           text="oracle"
+          activeFilter={activeFilter}
+          setActiveFilter={setActiveFilter}
+        />
+        <FilterLabel
+          text="social"
           activeFilter={activeFilter}
           setActiveFilter={setActiveFilter}
         />

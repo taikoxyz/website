@@ -32,6 +32,10 @@ pnpm dev
 
 Look at [next.config.js](./next.config.js) and [nextjs redirect docs](https://nextjs.org/docs/pages/api-reference/next-config-js/redirects).
 
+## Troubleshooting
+
+If you get the `Module not found` error when running this app on localhost, try to pin Next to version 14.0.3. (`"next": "14.0.3",`) in package.json.
+
 ## Contributing
 
 Refer to [CONTRIBUTING.md](../../CONTRIBUTING.md).
