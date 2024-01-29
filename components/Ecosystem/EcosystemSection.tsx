@@ -747,6 +747,15 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/zkex.png",
+        name: "ZKEX",
+        link: "https://testnet.app.zkex.com/",
+        description:
+            "ZKEX.com is a trust-minimized and self-custodial order book DEX with CeFi performance.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/zklink.png",
         name: "zkLink",
         link: "https://zk.link",
