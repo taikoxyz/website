@@ -56,7 +56,12 @@
                 "title": "Blockscout Block Explorer ↗",
                 "href": "https://explorer.katla.taiko.xyz",
                 "newWindow": true
-            }
+            }, 
+             "block-explorer-2": {
+                "title": "DexGuru Block Explorer ↗",
+                "href": "https://taiko-test.dex.guru/",
+                "newWindow": true
+            } 
         }
     }
 }
