@@ -78,29 +78,11 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
-        icon: "/images/ecosystem/blazpay.png",
-        name: "Blazpay",
-        link: "https://blazpay.com",
-        description:
-            "Blazpay, is ONE-STOP crypto Financial Solution, aspires to amalgamate the entirety of financial solutions within a cohesive platform, thereby facilitating the streamlined management of crypto assets for users and Business Owners.",
-        filters: [],
-        isLive: true,
-    },
-    {
         icon: "/images/ecosystem/blockpi.png",
         name: "BlockPI",
         link: "https://blockpi.io/",
         description:
             "BlockPI is a multi-chain globally distributed RPC Network, offers topnotch RPC services with low cost, high performance, low latency for all web3 projects. Additionally, BlockPI is paving its way on building a unified platform with a suite of tools designed for Account Abstraction.",
-        filters: [],
-        isLive: true,
-    },
-    {
-        icon: "/images/ecosystem/blockscout.svg",
-        name: "Blockscout",
-        link: "https://blockscout.com",
-        description:
-            "Blockchain Explorer for inspecting and analyzing EVM Chains.",
         filters: [],
         isLive: true,
     },
@@ -175,15 +157,6 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
-        icon: "/images/ecosystem/catalyst.png",
-        name: "Catalyst",
-        link: "https://catalyst.exchange/",
-        description:
-            "Catalyst is the cross-chain AMM built to connect all chains",
-        filters: [],
-        isLive: false,
-    },
-    {
         icon: "/images/ecosystem/chaindrop-faucet.png",
         name: "Chaindrop Faucet",
         link: "https://chaindrop.org",
@@ -200,15 +173,6 @@ const ecosystemData: EcosystemData[] = [
             "ChainPray provides spiritual assistance to ordinary users in the cryptocurrency community, combining traditional prayer with blockchain technology.",
         filters: [],
         isLive: true,
-    },
-    {
-        icon: "/images/ecosystem/cloak.png",
-        name: "Cloak",
-        link: "https://cloak.exchange/",
-        description:
-            "Cloak is a non-custodial dark pool, offering trustless, MEV-resistant, and slippage-resistant trades for any ERC-20 trading pairs.",
-        filters: [],
-        isLive: false,
     },
     {
         icon: "/images/ecosystem/crypton.png",
@@ -234,24 +198,6 @@ const ecosystemData: EcosystemData[] = [
         link: "https://foxwallet.com",
         description:
             "FoxWallet is a safe and easy-to-use decentralized audited wallet, dedicated to creating an entrance and connection to the Web3 world.",
-        filters: [],
-        isLive: true,
-    },
-    {
-        icon: "/images/ecosystem/gourds.jpeg",
-        name: "Gourds",
-        link: "https://gourds.studio",
-        description:
-            "Gourds aims to achieve crypto market efficiency by introducing novel trading instruments for mass adoption.",
-        filters: [],
-        isLive: true,
-    },
-    {
-        icon: "/images/ecosystem/hotpot.png",
-        name: "Hotpot",
-        link: "https://market.hotpot.gg/",
-        description:
-            "Hotpot Protocol offers a toolkit for creating gamified Dapps, enabling builders to engage users with provably fair jackpots, airdrop raffle tickets, and build decentralized prediction markets on EVMs.",
         filters: [],
         isLive: true,
     },
@@ -292,15 +238,6 @@ const ecosystemData: EcosystemData[] = [
         isLive: false,
     },
     {
-        icon: "/images/ecosystem/magpieprotocol.png",
-        name: "Magpie Protocol",
-        link: "https://www.magpiefi.xyz",
-        description:
-            "Magpie Protocol elevates crypto trading with its easy and secure token swaps across major chains. With fast, user-friendly, and non-custodial cross-chain swaps, Magpie ensures a seamless and efficient trading experience.",
-        filters: [],
-        isLive: false,
-    },
-    {
         icon: "/images/ecosystem/metamerge.png",
         name: "Meta Merge",
         link: "https://www.metamerge.xyz/",
@@ -319,37 +256,11 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
-        icon: "/images/ecosystem/mesprotocol.png",
-        name: "MES Protocol",
-        link: "https://www.mesprotocol.com/",
-        description: "MES is a cross-rollup orderbook DEX.",
-        filters: [],
-        isLive: false,
-    },
-    {
         icon: "/images/ecosystem/mintpad.jpeg",
         name: "Mintpad",
         link: "https://mintpad.co/",
         description:
             "Mintpad is a multi-chain, no-code creator tool solution designed to assist creators in implementing artwork, passes, tickets, and other items on various EVM-compatible blockchain networks.",
-        filters: [],
-        isLive: true,
-    },
-    {
-        icon: "/images/ecosystem/goneuron.jpeg",
-        name: "neuron 🧠",
-        link: "https://goneuron.xyz/",
-        description:
-            "neuron is a blazing fast privacy focused cross-chain bridge for transferring Ethereum native assets quickly and privately between chains faster than L1 native bridges cheaply.",
-        filters: [],
-        isLive: true,
-    },
-    {
-        icon: "/images/ecosystem/nexterfinance.png",
-        name: "Nexter Finance",
-        link: "http://app.nexter.fi",
-        description:
-            "The Only Multi-chain No-Loss Prediction Market 🔮 | Binary Options, Prediction Vaults, Quests & more",
         filters: [],
         isLive: true,
     },
@@ -381,24 +292,6 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
-        icon: "/images/ecosystem/micro3.png",
-        name: "Micro3",
-        link: "https://testnet.micro3.io/taikotestnet/0x626a24a8e34804b3ac0efc68b56c880ab6b4e01f",
-        description:
-            "Micro3 is a decentralized SocialFi NFT platform empowering the community, integrating SocialFi and NFT, utilizing #LayerZero and #Chainlink technologies.",
-        filters: ["nft"],
-        isLive: true,
-    },
-    {
-        icon: "/images/ecosystem/morkie.png",
-        name: "Morkie",
-        link: "https://www.morkie.xyz/",
-        description:
-            "Morkie aims to create an immersive oasis for NFT enthusiasts and collectors, offering them a unique space to not only showcase their digital assets but also to earn rewards for their loyalty and participation in the ecosystem.",
-        filters: ["nft"],
-        isLive: true,
-    },
-    {
         icon: "/images/ecosystem/movechess.png",
         name: "Movechess",
         link: "https://movechess.com",
@@ -426,23 +319,6 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
-        icon: "/images/ecosystem/omnikingdoms.png",
-        name: "OmniKingdoms",
-        link: "https://omnikingdoms.io",
-        description:
-            "MMORPG focused on state transitions and asset evolution. Train and level up in order to quest, craft and battle!",
-        filters: [],
-        isLive: true,
-    },
-    {
-        icon: "/images/ecosystem/omninetwork.png",
-        name: "Omni Network",
-        link: "https://omni.network",
-        description: "Unification infrastructure for Ethereum's L2 ecosystem.",
-        filters: [],
-        isLive: false,
-    },
-    {
         icon: "/images/ecosystem/omnisea.png",
         name: "Omnisea",
         link: "https://www.omnisea.org",
@@ -457,23 +333,6 @@ const ecosystemData: EcosystemData[] = [
         link: "https://orally.network",
         description:
             "The fully on-chain oracles for secure and reliable decentralized data feeding and automation across multiple chains.",
-        filters: [],
-        isLive: true,
-    },
-    {
-        icon: "/images/ecosystem/orbiter.jpg",
-        name: "Orbiter",
-        link: "https://orbiter.finance",
-        description:
-            "A decentralized cross-rollup Layer 2 bridge with a contract only on the destination side.",
-        filters: [],
-        isLive: true,
-    },
-    {
-        icon: "/images/ecosystem/owlto.png",
-        name: "Owlto",
-        link: "https://owlto.finance",
-        description: "The decentralized cross-rollup bridge focused on Layer2.",
         filters: [],
         isLive: true,
     },
@@ -495,29 +354,11 @@ const ecosystemData: EcosystemData[] = [
         isLive: false,
     },
     {
-        icon: "/images/ecosystem/pheasant-network.png",
-        name: "Pheasant Network",
-        link: "https://pheasant.network",
-        description:
-            "Pheasant Network is an optimistic bridge between Layer 1 and Layer 2.",
-        filters: [],
-        isLive: true,
-    },
-    {
         icon: "/images/ecosystem/pixelswap.png",
         name: "PixelSwap",
         link: "https://pixelswap.xyz",
         description:
             "Pixelswap: Pioneering the Future of Decentralized Exchange with Seamless Multichain Support and Enhanced User Experience.",
-        filters: [],
-        isLive: true,
-    },
-    {
-        icon: "/images/ecosystem/pizzap.png",
-        name: "Pizzap",
-        link: "https://taiko.pizzap.io",
-        description:
-            "Pizzap is a user-benefit-oriented and mass-adopted AI ecosystem. Members can create, show and trade NFTs in this community on Taiko.",
         filters: [],
         isLive: true,
     },
@@ -549,47 +390,11 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
-        icon: "/images/ecosystem/rangoexchange.png",
-        name: "Rango Exchange",
-        link: "https://rango.exchange/",
-        description:
-            "Cross-chain DEX & Bridge aggregator supporting 60+ chains, including BTC, EVM chains, Cosmos chains, Solana, Starknet, Tron and more!",
-        filters: [],
-        isLive: false,
-    },
-    {
         icon: "/images/ecosystem/rollupcodes.svg",
         name: "Rollup.codes",
         link: "https://www.rollup.codes/",
         description:
             "A reference tool for rollups info, including opcodes, precompiles and more.",
-        filters: [],
-        isLive: true,
-    },
-    {
-        icon: "/images/ecosystem/rhinofi.svg",
-        name: "rhino.fi",
-        link: "https://app.rhino.fi/",
-        description:
-            "The lightning-fast secure bridge for seamless cross-chain transactions",
-        filters: [],
-        isLive: false,
-    },
-    {
-        icon: "/images/ecosystem/rubic.png",
-        name: "Rubic",
-        link: "https://rubic.exchange/",
-        description:
-            "Rubic enhances interoperability through network bridging and cross-chain dev tools for omnichain dApps. Users access diverse assets via varied DEXs under a unified interface with optimized cross-chain transactions.",
-        filters: [],
-        isLive: true,
-    },
-    {
-        icon: "/images/ecosystem/rubydex.png",
-        name: "RubyDex",
-        link: "https://testnet.rubydex.com/en",
-        description:
-            "Perpetuals DEX offering crypto and traditional assets like Forex, Commodities, Stocks, ETFs, NFT perps, and more.",
         filters: [],
         isLive: true,
     },
@@ -665,38 +470,11 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
-        icon: "/images/ecosystem/vooi.jpeg",
-        name: "Vooi",
-        link: "https://vooi.io/",
-        description:
-            "vooi is a stableswap AMM DEX built for L2 chains on top of Unbounded pool technology.",
-        filters: [],
-        isLive: true,
-    },
-    {
         icon: "/images/ecosystem/wizardbridgeevm.png",
         name: "Wizard Bridge EVM",
         link: "https://testnet-wizardbridgeevm.web.app",
         description:
             "Wizard Bridge EVM | Fact Protocol Interface: (Proof of Message) 🧙 Better Solutions For Bridge all EVM (Cross-chain) 👩‍💻",
-        filters: [],
-        isLive: true,
-    },
-    {
-        icon: "/images/ecosystem/x7finance.png",
-        name: "X7R",
-        link: "https://x7.finance/",
-        description:
-            "Launch your project on Xchange with 10-1000x the initial liquidity into the Ethereum ecosystem where anyone can Swap, Borrow and Lend.",
-        filters: [],
-        isLive: false,
-    },
-    {
-        icon: "/images/ecosystem/xdao.png",
-        name: "XDAO",
-        link: "https://www.xdao.app",
-        description:
-            "XDAO is a fully customizable DAO framework for treasury management, multisig wallet and the platform for investment. DAOs on XDAO can be any-sized companies.",
         filters: [],
         isLive: true,
     },
@@ -744,15 +522,6 @@ const ecosystemData: EcosystemData[] = [
             "A ZK-Rollup trading infrastructure empowering DeFi, RWA, and NFT super dApps in a rollup-centric, multi-chain world.",
         filters: [],
         isLive: true,
-    },
-    {
-        icon: "/images/ecosystem/zksynth.png",
-        name: "ZKSynth",
-        link: "https://app.zksynth.com/",
-        description:
-            "zkSynth allows you to create and trade synthetic assets that track the price of any real-world asset, such as stocks, commodities, currencies, and more.",
-        filters: [],
-        isLive: false,
     },
 ];
 
