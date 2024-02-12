@@ -299,6 +299,15 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/imtoken.png",
+        name: "imToken",
+        link: "https://token.im/",
+        description:
+            "imToken, a reliable non-custodial mobile wallet for tokens you own - cryptocurrencies, stable coins, NFTs, and more.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/izar.png",
         name: "IZAR",
         link: "https://izar.xyz/",
@@ -308,11 +317,11 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
-        icon: "/images/ecosystem/imtoken.png",
-        name: "imToken",
-        link: "https://token.im/",
+        icon: "/images/ecosystem/imaginairynfts.png",
+        name: "ImaginAIryNFTs",
+        link: "https://testnet.imaginairynfts.com",
         description:
-            "imToken, a reliable non-custodial mobile wallet for tokens you own - cryptocurrencies, stable coins, NFTs, and more.",
+            "Unleash creativity with AI-generated art. Mint unique NFTs from your AI-dreamed designs. Your Prompt, Your Art, Your NFT!",
         filters: [],
         isLive: true,
     },
@@ -500,6 +509,15 @@ const ecosystemData: EcosystemData[] = [
         link: "https://www.omnisea.org",
         description:
             "Omnisea is the first permissionless Omnichain NFT Launchpad and Bridge powered by LayerZero.",
+        filters: [],
+        isLive: true,
+    },
+    {
+        icon: "/images/ecosystem/onchainrep.svg",
+        name: "OnChainRep",
+        link: "https://onchainrep.xyz",
+        description:
+            "ALL in ONE platform for increasing on-chain reputation and score.",
         filters: [],
         isLive: true,
     },
