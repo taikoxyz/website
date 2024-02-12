@@ -283,6 +283,15 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/jokerace.png",
+        name: "JokeRace",
+        link: "https://jokerace.io",
+        description:
+            "JokeRace is the contest platform for communities to make, execute, reward—and, yes, monetize— decisions by deploying a contest on any EVM chain. Contests let communities submit and vote on entries... and winners to earn rewards.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/l2faucet.png",
         name: "L2 Faucet",
         link: "https://www.l2faucet.com/",
