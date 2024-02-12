@@ -274,6 +274,14 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/headandtell.png",
+        name: "Head and Tell",
+        link: "https://test.everypunks.xyz/",
+        description: "A 50/50 chance game.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/hotpot.png",
         name: "Hotpot",
         link: "https://market.hotpot.gg/",
