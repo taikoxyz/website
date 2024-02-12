@@ -105,6 +105,14 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/bongolaunchpad.png",
+        name: "Bongo Launchpad",
+        link: "https://bongo.finance/",
+        description: "The premiere launchpad on Taiko.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/brian.png",
         name: "Brian",
         link: "https://www.brianknows.org",
@@ -787,6 +795,15 @@ const ecosystemData: EcosystemData[] = [
             "A ZK-Rollup trading infrastructure empowering DeFi, RWA, and NFT super dApps in a rollup-centric, multi-chain world.",
         filters: [],
         isLive: true,
+    },
+    {
+        icon: "/images/ecosystem/zkex.png",
+        name: "ZKEX",
+        link: "https://zkex.com",
+        description:
+            "Ultra-secure omni-chain trading secured with zero-knowledge, ZKEX.com is a trust-minimized and self-custodial order book DEX with CeFi performance.",
+        filters: [],
+        isLive: false,
     },
     {
         icon: "/images/ecosystem/zksynth.png",
