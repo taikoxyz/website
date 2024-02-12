@@ -166,6 +166,15 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/dojonode.png",
+        name: "dojo node",
+        link: "https://dojonode.xyz",
+        description:
+            "A user friendly, easy to read, and visually pleasing dashboard for monitoring your Node/Proposer/Prover.",
+        filters: ["dashboard"],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/desig.svg",
         name: "Desig",
         link: "https://desig.io/",
@@ -665,12 +674,11 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
-        icon: "/images/ecosystem/dojonode.png",
-        name: "dojo node",
-        link: "https://dojonode.xyz",
-        description:
-            "A user friendly, easy to read, and visually pleasing dashboard for monitoring your Node/Proposer/Prover.",
-        filters: ["dashboard"],
+        icon: "/images/ecosystem/tkochat.png",
+        name: "TKO Chat",
+        link: "https://tko.chat/",
+        description: "Decentralized social network on Taiko.",
+        filters: [],
         isLive: true,
     },
     {
