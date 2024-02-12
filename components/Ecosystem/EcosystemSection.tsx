@@ -105,6 +105,14 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/bongolaunchpad.png",
+        name: "Bongo Launchpad",
+        link: "https://bongo.finance/",
+        description: "The premiere launchpad on Taiko.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/brian.png",
         name: "Brian",
         link: "https://www.brianknows.org",
@@ -157,6 +165,24 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/drpc.png",
+        name: "dRPC",
+        link: "https://drpc.org",
+        description:
+            "dRPC is your all-in-one RPC provider, featuring an AI-driven load balancer and a collaborative network of providers, all designed to deliver superior performance in a cost-efficient manner. Our service seamlessly combines the low-latency and user-friendliness of centralized solutions with the robustness and geo-distribution of decentralized alternatives.",
+        filters: [],
+        isLive: true,
+    },
+    {
+        icon: "/images/ecosystem/dojonode.png",
+        name: "dojo node",
+        link: "https://dojonode.xyz",
+        description:
+            "A user friendly, easy to read, and visually pleasing dashboard for monitoring your Node/Proposer/Prover.",
+        filters: ["dashboard"],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/desig.svg",
         name: "Desig",
         link: "https://desig.io/",
@@ -173,6 +199,15 @@ const ecosystemData: EcosystemData[] = [
             "Web3 identities natively on Taiko blockchain, built by DotNames.",
         filters: [],
         isLive: true,
+    },
+    {
+        icon: "/images/ecosystem/dropx.png",
+        name: "DropX",
+        link: "https://www.stationx.network/",
+        description:
+            "With DropX, create public, token gated or whitelisted drops/claims for your ecosystem, project, community, friends, etc. or simply bulk distribute tokens.",
+        filters: [],
+        isLive: false,
     },
     {
         icon: "/images/ecosystem/catalyst.png",
@@ -247,11 +282,28 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/headandtell.png",
+        name: "Head and Tell",
+        link: "https://test.everypunks.xyz/",
+        description: "A 50/50 chance game.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/hotpot.png",
         name: "Hotpot",
         link: "https://market.hotpot.gg/",
         description:
             "Hotpot Protocol offers a toolkit for creating gamified Dapps, enabling builders to engage users with provably fair jackpots, airdrop raffle tickets, and build decentralized prediction markets on EVMs.",
+        filters: [],
+        isLive: true,
+    },
+    {
+        icon: "/images/ecosystem/imtoken.png",
+        name: "imToken",
+        link: "https://token.im/",
+        description:
+            "imToken, a reliable non-custodial mobile wallet for tokens you own - cryptocurrencies, stable coins, NFTs, and more.",
         filters: [],
         isLive: true,
     },
@@ -265,11 +317,20 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
-        icon: "/images/ecosystem/imtoken.png",
-        name: "imToken",
-        link: "https://token.im/",
+        icon: "/images/ecosystem/imaginairynfts.png",
+        name: "ImaginAIryNFTs",
+        link: "https://testnet.imaginairynfts.com",
         description:
-            "imToken, a reliable non-custodial mobile wallet for tokens you own - cryptocurrencies, stable coins, NFTs, and more.",
+            "Unleash creativity with AI-generated art. Mint unique NFTs from your AI-dreamed designs. Your Prompt, Your Art, Your NFT!",
+        filters: [],
+        isLive: true,
+    },
+    {
+        icon: "/images/ecosystem/jokerace.png",
+        name: "JokeRace",
+        link: "https://jokerace.io",
+        description:
+            "JokeRace is the contest platform for communities to make, execute, reward—and, yes, monetize— decisions by deploying a contest on any EVM chain. Contests let communities submit and vote on entries... and winners to earn rewards.",
         filters: [],
         isLive: true,
     },
@@ -448,6 +509,15 @@ const ecosystemData: EcosystemData[] = [
         link: "https://www.omnisea.org",
         description:
             "Omnisea is the first permissionless Omnichain NFT Launchpad and Bridge powered by LayerZero.",
+        filters: [],
+        isLive: true,
+    },
+    {
+        icon: "/images/ecosystem/onchainrep.svg",
+        name: "OnChainRep",
+        link: "https://onchainrep.xyz",
+        description:
+            "ALL in ONE platform for increasing on-chain reputation and score.",
         filters: [],
         isLive: true,
     },
@@ -638,12 +708,11 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
-        icon: "/images/ecosystem/dojonode.png",
-        name: "dojo node",
-        link: "https://dojonode.xyz",
-        description:
-            "A user friendly, easy to read, and visually pleasing dashboard for monitoring your Node/Proposer/Prover.",
-        filters: ["dashboard"],
+        icon: "/images/ecosystem/tkochat.png",
+        name: "TKO Chat",
+        link: "https://tko.chat/",
+        description: "Decentralized social network on Taiko.",
+        filters: [],
         isLive: true,
     },
     {
@@ -744,6 +813,15 @@ const ecosystemData: EcosystemData[] = [
             "A ZK-Rollup trading infrastructure empowering DeFi, RWA, and NFT super dApps in a rollup-centric, multi-chain world.",
         filters: [],
         isLive: true,
+    },
+    {
+        icon: "/images/ecosystem/zkex.png",
+        name: "ZKEX",
+        link: "https://zkex.com",
+        description:
+            "Ultra-secure omni-chain trading secured with zero-knowledge, ZKEX.com is a trust-minimized and self-custodial order book DEX with CeFi performance.",
+        filters: [],
+        isLive: false,
     },
     {
         icon: "/images/ecosystem/zksynth.png",
