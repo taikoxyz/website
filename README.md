@@ -34,4 +34,4 @@ Look at [next.config.js](./next.config.js) and [nextjs redirect docs](https://ne
 
 ## Contributing
 
-Refer to [CONTRIBUTING.md](../../CONTRIBUTING.md).
+Refer to [contribution guide](https://docs.taiko.xyz/start-here/contributing).
