@@ -832,6 +832,15 @@ const ecosystemData: EcosystemData[] = [
         filters: [],
         isLive: false,
     },
+    {
+        icon: "/images/ecosystem/coastlinefi.png",
+        name: "CoastlineFi",
+        link: "https://www.coastlinefi.xyz",
+        description:
+            "The first innovative ve(3,3)+ dex on Taiko.Hold veCSTL for invitation farming and earn 1000% APY with zero risk.",
+        filters: [],
+        isLive: false,
+    },
 ];
 
 export function EcosystemSection() {
@@ -842,8 +851,8 @@ export function EcosystemSection() {
         activeFilter === "all"
             ? ecosystemData
             : ecosystemData.filter((data) =>
-                  data.filters.includes(activeFilter)
-              );
+                data.filters.includes(activeFilter)
+            );
 
     return (
         <>
@@ -923,15 +932,13 @@ export function EcosystemSection() {
 function FilterLabel({ text, activeFilter, setActiveFilter }) {
     const isActive = activeFilter === text;
 
-    const buttonStyles = `border rounded-full py-1 px-4 text-sm focus:outline-none transition-colors duration-200 font-bold ${
-        isActive
+    const buttonStyles = `border rounded-full py-1 px-4 text-sm focus:outline-none transition-colors duration-200 font-bold ${isActive
             ? "bg-gray-300 text-black"
             : "bg-white text-gray-700 dark:bg-black dark:text-gray-300"
-    } ${
-        isActive
+        } ${isActive
             ? "hover:bg-gray-400"
             : "hover:bg-neutral-100 dark:hover:bg-neutral-800"
-    }`;
+        }`;
 
     return (
         <button className={buttonStyles} onClick={() => setActiveFilter(text)}>
