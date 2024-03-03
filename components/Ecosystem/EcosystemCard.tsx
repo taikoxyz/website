@@ -1,8 +1,16 @@
-function formatLink(link: string) {
+function formatLink(link: string): string {
   return link.replace(/^(?:https?:\/\/)?(?:www\.)?/i, "").split("/")[0].concat(" ↗");
 }
 
-function EcosystemCard({ icon, name, isLive, link, description }) {
+type EcosystemCardProps = {
+  icon: string;
+  name: string;
+  link?: string;
+  isLive?: boolean;
+  description?: string;
+}
+
+function EcosystemCard({ icon, name, isLive, link, description }: EcosystemCardProps) {
   return (
     <a
       href={link}
@@ -20,6 +28,7 @@ function EcosystemCard({ icon, name, isLive, link, description }) {
       <h2 className="text-2xl text-black dark:text-white font-bold mb-2">
         {name}
       </h2>
+      {/* TODO: possible to reomve */}
       {/* {isLive ? (
         <div className="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-md mb-4">
           Live on testnet
