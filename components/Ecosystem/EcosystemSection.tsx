@@ -716,6 +716,14 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/taiko.svg",
+        name: "Taiko Safe",
+        link: "https://safe.taiko.xyz/",
+        description: "Multisig wallet on Taiko.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/taikoverse.png",
         name: "Taikoverse",
         link: "https://linktr.ee/taikoverse",
