@@ -53,8 +53,8 @@
         "type": "menu",
         "items": {
             "block-explorer-1": {
-                "title": "Blockscout Block Explorer ↗",
-                "href": "https://explorer.katla.taiko.xyz",
+                "title": "Block Explorer ↗",
+                "href": "https://katla.taikoscan.network/",
                 "newWindow": true
             }
         }
