@@ -729,6 +729,15 @@ const ecosystemData: EcosystemData[] = [
         filters: [],
         isLive: true,
     },
+    // {
+    //     icon: "/images/ecosystem/roguex.svg",
+    //     name: "rougex",
+    //     link: "https://roguex.io/",
+    //     description:
+    //         "RogueX innovates with an AMM that merges perpetual trading into liquidity pools, enhancing asset utilization and supporting leveraged trades for a diverse range of tokens, especially memecoins.",
+    //     filters: [],
+    //     isLive: true,
+    // },
     {
         icon: "/images/ecosystem/rhinofi.svg",
         name: "rhino.fi",
