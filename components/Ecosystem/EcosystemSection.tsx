@@ -452,6 +452,7 @@ const ecosystemData: EcosystemData[] = [
         filters: [],
         isLive: true,
     },
+
     {
         icon: "/images/ecosystem/goneuron.jpeg",
         name: "neuron 🧠",
@@ -467,6 +468,15 @@ const ecosystemData: EcosystemData[] = [
         link: "http://app.nexter.fi",
         description:
             "The Only Multi-chain No-Loss Prediction Market 🔮 | Binary Options, Prediction Vaults, Quests & more",
+        filters: [],
+        isLive: true,
+    },
+    {
+        icon: "/images/ecosystem/nitro.jpeg",
+        name: "Nitro (by Router Protocol)",
+        link: "https://testnet.routernitro.com/swap",
+        description:
+            "Nitro by Router Protocol is the world's most gas optimised, fast, and highly capital efficient intent-based bridge. With Router Nitro, users can experience <15 sec bridging & ~50%+ cheaper costs.",
         filters: [],
         isLive: true,
     },
