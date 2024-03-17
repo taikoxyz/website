@@ -425,6 +425,15 @@ const ecosystemData: EcosystemData[] = [
         isLive: false,
     },
     {
+        icon: "/images/ecosystem/mintair.jpeg",
+        name: "Mintair",
+        link: "https://mintair.xyz",
+        description:
+            "Mintair helps in streamlining the process of running a blockchain node in just few clicks.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/mintpad.jpeg",
         name: "Mintpad",
         link: "https://mintpad.co/",
