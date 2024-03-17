@@ -291,6 +291,15 @@ const ecosystemData: EcosystemData[] = [
         isLive: false,
     },
     {
+        icon: "/images/ecosystem/evmwarfare.png",
+        name: "EVM Warfare",
+        link: "https://evmwarfare.com/",
+        description:
+            "We are a Third person shooter gaming project building on Unreal Engine which is compatible with all EVM Chains.",
+        filters: [],
+        isLive: false,
+    },
+    {
         icon: "/images/ecosystem/dexguru.png",
         name: "DexGuru Katla Explorer",
         link: "https://taiko-test.dex.guru/",
