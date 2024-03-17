@@ -68,6 +68,15 @@ const ecosystemData: EcosystemData[] = [
         filters: [],
         isLive: true,
     },
+    // {
+    //     icon: "/images/ecosystem/bellaprotocol.png",
+    //     name: "Bella Protocol",
+    //     link: "https://www.bella.fi/",
+    //     description:
+    //         "Bella Protocol is a DeFi project that provides a suite of streamlined tools, including a yield farming product Bella LP Farm, which is live on zkSync, Mantle Network and Manta Network, an Ethereum-based yield aggregator Bella Flex Savings, and a Uniswap V3 simulator called Tuner.",
+    //     filters: [],
+    //     isLive: false,
+    // },
     {
         icon: "/images/ecosystem/bigint.png",
         name: "BigInt Nft Marketplace",
