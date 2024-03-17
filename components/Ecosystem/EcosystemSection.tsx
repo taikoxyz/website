@@ -192,51 +192,6 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
-        icon: "/images/ecosystem/drpc.png",
-        name: "dRPC",
-        link: "https://drpc.org",
-        description:
-            "dRPC is your all-in-one RPC provider, featuring an AI-driven load balancer and a collaborative network of providers, all designed to deliver superior performance in a cost-efficient manner. Our service seamlessly combines the low-latency and user-friendliness of centralized solutions with the robustness and geo-distribution of decentralized alternatives.",
-        filters: [],
-        isLive: true,
-    },
-    {
-        icon: "/images/ecosystem/dojonode.png",
-        name: "dojo node",
-        link: "https://dojonode.xyz",
-        description:
-            "A user friendly, easy to read, and visually pleasing dashboard for monitoring your Node/Proposer/Prover.",
-        filters: ["dashboard"],
-        isLive: true,
-    },
-    {
-        icon: "/images/ecosystem/desig.svg",
-        name: "Desig Multisig Wallet",
-        link: "https://desig.io/",
-        description:
-            "Experience the first Omnichain Smart Multisig wallet that streamlines treasury ops. Watch your funds flourish with intuitive tracking, smart allocation & insightful cashflow reports. Enjoy gasless vault control; intel-driven swap.",
-        filters: [],
-        isLive: true,
-    },
-    {
-        icon: "/images/ecosystem/dottaiko.png",
-        name: "DotTaiko",
-        link: "https://dottaiko.me",
-        description:
-            "Web3 identities natively on Taiko blockchain, built by DotNames.",
-        filters: [],
-        isLive: true,
-    },
-    {
-        icon: "/images/ecosystem/dropx.png",
-        name: "DropX",
-        link: "https://www.stationx.network/",
-        description:
-            "With DropX, create public, token gated or whitelisted drops/claims for your ecosystem, project, community, friends, etc. or simply bulk distribute tokens.",
-        filters: [],
-        isLive: false,
-    },
-    {
         icon: "/images/ecosystem/catalyst.png",
         name: "Catalyst",
         link: "https://catalyst.exchange/",
@@ -290,6 +245,52 @@ const ecosystemData: EcosystemData[] = [
         filters: [],
         isLive: false,
     },
+    {
+        icon: "/images/ecosystem/drpc.png",
+        name: "dRPC",
+        link: "https://drpc.org",
+        description:
+            "dRPC is your all-in-one RPC provider, featuring an AI-driven load balancer and a collaborative network of providers, all designed to deliver superior performance in a cost-efficient manner. Our service seamlessly combines the low-latency and user-friendliness of centralized solutions with the robustness and geo-distribution of decentralized alternatives.",
+        filters: [],
+        isLive: true,
+    },
+    {
+        icon: "/images/ecosystem/dojonode.png",
+        name: "dojo node",
+        link: "https://dojonode.xyz",
+        description:
+            "A user friendly, easy to read, and visually pleasing dashboard for monitoring your Node/Proposer/Prover.",
+        filters: ["dashboard"],
+        isLive: true,
+    },
+    {
+        icon: "/images/ecosystem/desig.svg",
+        name: "Desig Multisig Wallet",
+        link: "https://desig.io/",
+        description:
+            "Experience the first Omnichain Smart Multisig wallet that streamlines treasury ops. Watch your funds flourish with intuitive tracking, smart allocation & insightful cashflow reports. Enjoy gasless vault control; intel-driven swap.",
+        filters: [],
+        isLive: true,
+    },
+    {
+        icon: "/images/ecosystem/dottaiko.png",
+        name: "DotTaiko",
+        link: "https://dottaiko.me",
+        description:
+            "Web3 identities natively on Taiko blockchain, built by DotNames.",
+        filters: [],
+        isLive: true,
+    },
+    {
+        icon: "/images/ecosystem/dropx.png",
+        name: "DropX",
+        link: "https://www.stationx.network/",
+        description:
+            "With DropX, create public, token gated or whitelisted drops/claims for your ecosystem, project, community, friends, etc. or simply bulk distribute tokens.",
+        filters: [],
+        isLive: false,
+    },
+
     {
         icon: "/images/ecosystem/evmwarfare.png",
         name: "EVM Warfare",
