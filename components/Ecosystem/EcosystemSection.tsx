@@ -273,6 +273,15 @@ const ecosystemData: EcosystemData[] = [
         isLive: false,
     },
     {
+        icon: "/images/ecosystem/dexguru.png",
+        name: "DexGuru Katla Explorer",
+        link: "https://taiko-test.dex.guru/",
+        description:
+            "DexGuru is an Analytics Platform and Block Explorer for Taiko Katla.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/foxwallet.png",
         name: "FoxWallet",
         link: "https://foxwallet.com",
