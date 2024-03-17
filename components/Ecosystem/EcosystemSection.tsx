@@ -328,6 +328,15 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/hana.png",
+        name: "Hana Finance",
+        link: "https://www.hana.finance/",
+        description:
+            "Hana Finance is a decentralised non-custodial liquidity market protocol built on Taiko",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/hotpot.png",
         name: "Hotpot",
         link: "https://market.hotpot.gg/",
