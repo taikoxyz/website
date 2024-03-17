@@ -906,6 +906,15 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/xave.png",
+        name: "Xave",
+        link: "https://www.xave.co",
+        description:
+            "Xave builds decentralized markets for RWA and on-chain FX.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/xverse.png",
         name: "Xverse",
         link: "https://taiko-test.xverse.fi/?chain=taiko_testnet",
