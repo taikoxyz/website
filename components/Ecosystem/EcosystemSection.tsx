@@ -211,12 +211,12 @@ const ecosystemData: EcosystemData[] = [
     },
     {
         icon: "/images/ecosystem/desig.svg",
-        name: "Desig",
+        name: "Desig Multisig Wallet",
         link: "https://desig.io/",
         description:
             "Experience the first Omnichain Smart Multisig wallet that streamlines treasury ops. Watch your funds flourish with intuitive tracking, smart allocation & insightful cashflow reports. Enjoy gasless vault control; intel-driven swap.",
         filters: [],
-        isLive: false,
+        isLive: true,
     },
     {
         icon: "/images/ecosystem/dottaiko.png",
