@@ -352,6 +352,15 @@ const ecosystemData: EcosystemData[] = [
         filters: [],
         isLive: true,
     },
+    // {
+    //     icon: "/images/ecosystem/izumi.png",
+    //     name: "iZUMi Finance",
+    //     link: "https://izumi.finance/home",
+    //     description:
+    //         "iZUMi Finance is a multi-chain DeFi protocol providing one-stop DEX-as-a-Service (DaaS)",
+    //     filters: [],
+    //     isLive: false,
+    // },
     {
         icon: "/images/ecosystem/imaginairynfts.png",
         name: "ImaginAIryNFTs",
