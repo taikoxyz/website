@@ -51,6 +51,15 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/ankr.png",
+        name: "Ankr",
+        link: "https://www.ankr.com/",
+        description:
+            "Ankr is the leading Web3 infrastructure company. It has a set of different products for building, earning, gaming, and more — all on blockchain.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/apusnetwork.png",
         name: "Apus Network",
         link: "https://www.apus.network/",
