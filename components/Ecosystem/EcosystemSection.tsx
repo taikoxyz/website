@@ -517,6 +517,15 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/lussa.svg",
+        name: "Lussa: The Final Frontier",
+        link: "https://lussa.io",
+        description:
+            "LUSSA is an immersive MMO Battle Royale set in a sprawling sci-fi universe where players wield strategic prowess, forge alliances, and conquer planets, all powered by cutting-edge blockchain technology.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/micro3.png",
         name: "Micro3",
         link: "https://testnet.micro3.io/taikotestnet/0x626a24a8e34804b3ac0efc68b56c880ab6b4e01f",
@@ -558,6 +567,15 @@ const ecosystemData: EcosystemData[] = [
         link: "https://nfts2me.com/app",
         description:
             "NFTs2Me is a multichain user-friendly comprehensive platform to create, deploy and manage your NFT collection and community, 100% free with advanced functionalities.",
+        filters: [],
+        isLive: true,
+    },
+    {
+        icon: "/images/ecosystem/noder.png",
+        name: "Noder",
+        link: "https://noder.bot/",
+        description:
+            "Infrastructure. Nodes. They're complicated. We manage them for you.",
         filters: [],
         isLive: true,
     },
