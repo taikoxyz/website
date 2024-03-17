@@ -69,6 +69,15 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     // {
+    //     icon: "/images/ecosystem/arpa.png",
+    //     name: "ARPA Network",
+    //     link: "https://www.arpanetwork.io/en-US",
+    //     description:
+    //         "ARPA Network is a threshold BLS signature scheme-based computation network. It is decentralized, secure and EVM-compatible. ARPA also builds Randcast, an on-chain verifiable RNG for tamper-proof randomness in Autonomous Worlds, gaming, and NFTs. ARPA Randcast is live on Ethereum, Optimism and Base.",
+    //     filters: [],
+    //     isLive: false,
+    // },
+    // {
     //     icon: "/images/ecosystem/bellaprotocol.png",
     //     name: "Bella Protocol",
     //     link: "https://www.bella.fi/",
