@@ -459,6 +459,15 @@ const ecosystemData: EcosystemData[] = [
         filters: [],
         isLive: true,
     },
+    // {
+    //     icon: "/images/ecosystem/nomis.png",
+    //     name: "Nomis Protocol",
+    //     link: "https://nomis.cc/taiko",
+    //     description:
+    //         "Nomis utilizes onchain activity to assign Reputation Scores to wallets, allowing you to access and leverage your wallet history – much like you would with IRL credentials and social networks. It helps you gain custom terms and meaningful experiences across the web3 space.",
+    //     filters: [],
+    //     isLive: true,
+    // },
     {
         icon: "/images/ecosystem/kalkiswap.png",
         name: "KALKI SWAP",
