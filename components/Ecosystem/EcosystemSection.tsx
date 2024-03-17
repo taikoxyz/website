@@ -778,6 +778,15 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/timelessx.png",
+        name: "Timeless X",
+        link: "https://timelesswallet.xyz/",
+        description:
+            "The 1st self-custodial social wallet. Conveniently pay, connect, chat & collaborate with anyone. Powered by account abstraction, open social graphs & censorship-resistant communication.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/vooi.jpeg",
         name: "Vooi",
         link: "https://vooi.io/",
