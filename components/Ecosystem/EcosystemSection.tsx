@@ -544,6 +544,15 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/midle.jpeg",
+        name: "Midle",
+        link: "https://midle.io/",
+        description:
+            "Midle is the web and mobile app boosts user acquisition, retention and engagement.",
+        filters: ["wallet"],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/morkie.png",
         name: "Morkie",
         link: "https://www.morkie.xyz/",
