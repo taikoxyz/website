@@ -51,6 +51,15 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/ankr.png",
+        name: "Ankr",
+        link: "https://www.ankr.com/",
+        description:
+            "Ankr is the leading Web3 infrastructure company. It has a set of different products for building, earning, gaming, and more — all on blockchain.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/apusnetwork.png",
         name: "Apus Network",
         link: "https://www.apus.network/",
@@ -59,6 +68,24 @@ const ecosystemData: EcosystemData[] = [
         filters: [],
         isLive: true,
     },
+    // {
+    //     icon: "/images/ecosystem/arpa.png",
+    //     name: "ARPA Network",
+    //     link: "https://www.arpanetwork.io/en-US",
+    //     description:
+    //         "ARPA Network is a threshold BLS signature scheme-based computation network. It is decentralized, secure and EVM-compatible. ARPA also builds Randcast, an on-chain verifiable RNG for tamper-proof randomness in Autonomous Worlds, gaming, and NFTs. ARPA Randcast is live on Ethereum, Optimism and Base.",
+    //     filters: [],
+    //     isLive: false,
+    // },
+    // {
+    //     icon: "/images/ecosystem/bellaprotocol.png",
+    //     name: "Bella Protocol",
+    //     link: "https://www.bella.fi/",
+    //     description:
+    //         "Bella Protocol is a DeFi project that provides a suite of streamlined tools, including a yield farming product Bella LP Farm, which is live on zkSync, Mantle Network and Manta Network, an Ethereum-based yield aggregator Bella Flex Savings, and a Uniswap V3 simulator called Tuner.",
+    //     filters: [],
+    //     isLive: false,
+    // },
     {
         icon: "/images/ecosystem/bigint.png",
         name: "BigInt Nft Marketplace",
@@ -165,51 +192,6 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
-        icon: "/images/ecosystem/drpc.png",
-        name: "dRPC",
-        link: "https://drpc.org",
-        description:
-            "dRPC is your all-in-one RPC provider, featuring an AI-driven load balancer and a collaborative network of providers, all designed to deliver superior performance in a cost-efficient manner. Our service seamlessly combines the low-latency and user-friendliness of centralized solutions with the robustness and geo-distribution of decentralized alternatives.",
-        filters: [],
-        isLive: true,
-    },
-    {
-        icon: "/images/ecosystem/dojonode.png",
-        name: "dojo node",
-        link: "https://dojonode.xyz",
-        description:
-            "A user friendly, easy to read, and visually pleasing dashboard for monitoring your Node/Proposer/Prover.",
-        filters: ["dashboard"],
-        isLive: true,
-    },
-    {
-        icon: "/images/ecosystem/desig.svg",
-        name: "Desig",
-        link: "https://desig.io/",
-        description:
-            "Experience the first Omnichain Smart Multisig wallet that streamlines treasury ops. Watch your funds flourish with intuitive tracking, smart allocation & insightful cashflow reports. Enjoy gasless vault control; intel-driven swap.",
-        filters: [],
-        isLive: false,
-    },
-    {
-        icon: "/images/ecosystem/dottaiko.png",
-        name: "DotTaiko",
-        link: "https://dottaiko.me",
-        description:
-            "Web3 identities natively on Taiko blockchain, built by DotNames.",
-        filters: [],
-        isLive: true,
-    },
-    {
-        icon: "/images/ecosystem/dropx.png",
-        name: "DropX",
-        link: "https://www.stationx.network/",
-        description:
-            "With DropX, create public, token gated or whitelisted drops/claims for your ecosystem, project, community, friends, etc. or simply bulk distribute tokens.",
-        filters: [],
-        isLive: false,
-    },
-    {
         icon: "/images/ecosystem/catalyst.png",
         name: "Catalyst",
         link: "https://catalyst.exchange/",
@@ -264,6 +246,70 @@ const ecosystemData: EcosystemData[] = [
         isLive: false,
     },
     {
+        icon: "/images/ecosystem/drpc.png",
+        name: "dRPC",
+        link: "https://drpc.org",
+        description:
+            "dRPC is your all-in-one RPC provider, featuring an AI-driven load balancer and a collaborative network of providers, all designed to deliver superior performance in a cost-efficient manner. Our service seamlessly combines the low-latency and user-friendliness of centralized solutions with the robustness and geo-distribution of decentralized alternatives.",
+        filters: [],
+        isLive: true,
+    },
+    {
+        icon: "/images/ecosystem/dojonode.png",
+        name: "dojo node",
+        link: "https://dojonode.xyz",
+        description:
+            "A user friendly, easy to read, and visually pleasing dashboard for monitoring your Node/Proposer/Prover.",
+        filters: ["dashboard"],
+        isLive: true,
+    },
+    {
+        icon: "/images/ecosystem/desig.svg",
+        name: "Desig Multisig Wallet",
+        link: "https://desig.io/",
+        description:
+            "Experience the first Omnichain Smart Multisig wallet that streamlines treasury ops. Watch your funds flourish with intuitive tracking, smart allocation & insightful cashflow reports. Enjoy gasless vault control; intel-driven swap.",
+        filters: [],
+        isLive: true,
+    },
+    {
+        icon: "/images/ecosystem/dottaiko.png",
+        name: "DotTaiko",
+        link: "https://dottaiko.me",
+        description:
+            "Web3 identities natively on Taiko blockchain, built by DotNames.",
+        filters: [],
+        isLive: true,
+    },
+    {
+        icon: "/images/ecosystem/dropx.png",
+        name: "DropX",
+        link: "https://www.stationx.network/",
+        description:
+            "With DropX, create public, token gated or whitelisted drops/claims for your ecosystem, project, community, friends, etc. or simply bulk distribute tokens.",
+        filters: [],
+        isLive: false,
+    },
+
+    {
+        icon: "/images/ecosystem/evmwarfare.png",
+        name: "EVM Warfare",
+        link: "https://evmwarfare.com/",
+        description:
+            "We are a Third person shooter gaming project building on Unreal Engine which is compatible with all EVM Chains.",
+        filters: [],
+        isLive: false,
+    },
+    {
+        icon: "/images/ecosystem/dexguru.png",
+        name: "DexGuru Katla Explorer",
+        link: "https://taiko-test.dex.guru/",
+        description:
+            "DexGuru is an Analytics Platform and Block Explorer for Taiko Katla.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/foxwallet.png",
         name: "FoxWallet",
         link: "https://foxwallet.com",
@@ -282,10 +328,11 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
-        icon: "/images/ecosystem/headandtell.png",
-        name: "Head and Tell",
-        link: "https://test.everypunks.xyz/",
-        description: "A 50/50 chance game.",
+        icon: "/images/ecosystem/hana.png",
+        name: "Hana Finance",
+        link: "https://www.hana.finance/",
+        description:
+            "Hana Finance is a decentralised non-custodial liquidity market protocol built on Taiko",
         filters: [],
         isLive: true,
     },
@@ -316,6 +363,15 @@ const ecosystemData: EcosystemData[] = [
         filters: [],
         isLive: true,
     },
+    // {
+    //     icon: "/images/ecosystem/izumi.png",
+    //     name: "iZUMi Finance",
+    //     link: "https://izumi.finance/home",
+    //     description:
+    //         "iZUMi Finance is a multi-chain DeFi protocol providing one-stop DEX-as-a-Service (DaaS)",
+    //     filters: [],
+    //     isLive: false,
+    // },
     {
         icon: "/images/ecosystem/imaginairynfts.png",
         name: "ImaginAIryNFTs",
@@ -388,6 +444,15 @@ const ecosystemData: EcosystemData[] = [
         isLive: false,
     },
     {
+        icon: "/images/ecosystem/mintair.jpeg",
+        name: "Mintair",
+        link: "https://mintair.xyz",
+        description:
+            "Mintair helps in streamlining the process of running a blockchain node in just few clicks.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/mintpad.jpeg",
         name: "Mintpad",
         link: "https://mintpad.co/",
@@ -396,6 +461,7 @@ const ecosystemData: EcosystemData[] = [
         filters: [],
         isLive: true,
     },
+
     {
         icon: "/images/ecosystem/goneuron.jpeg",
         name: "neuron 🧠",
@@ -414,6 +480,24 @@ const ecosystemData: EcosystemData[] = [
         filters: [],
         isLive: true,
     },
+    {
+        icon: "/images/ecosystem/nitro.jpeg",
+        name: "Nitro (by Router Protocol)",
+        link: "https://testnet.routernitro.com/swap",
+        description:
+            "Nitro by Router Protocol is the world's most gas optimised, fast, and highly capital efficient intent-based bridge. With Router Nitro, users can experience <15 sec bridging & ~50%+ cheaper costs.",
+        filters: [],
+        isLive: true,
+    },
+    // {
+    //     icon: "/images/ecosystem/nomis.png",
+    //     name: "Nomis Protocol",
+    //     link: "https://nomis.cc/taiko",
+    //     description:
+    //         "Nomis utilizes onchain activity to assign Reputation Scores to wallets, allowing you to access and leverage your wallet history – much like you would with IRL credentials and social networks. It helps you gain custom terms and meaningful experiences across the web3 space.",
+    //     filters: [],
+    //     isLive: true,
+    // },
     {
         icon: "/images/ecosystem/kalkiswap.png",
         name: "KALKI SWAP",
@@ -442,12 +526,30 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/lussa.svg",
+        name: "Lussa: The Final Frontier",
+        link: "https://lussa.io",
+        description:
+            "LUSSA is an immersive MMO Battle Royale set in a sprawling sci-fi universe where players wield strategic prowess, forge alliances, and conquer planets, all powered by cutting-edge blockchain technology.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/micro3.png",
         name: "Micro3",
         link: "https://testnet.micro3.io/taikotestnet/0x626a24a8e34804b3ac0efc68b56c880ab6b4e01f",
         description:
             "Micro3 is a decentralized SocialFi NFT platform empowering the community, integrating SocialFi and NFT, utilizing #LayerZero and #Chainlink technologies.",
         filters: ["nft"],
+        isLive: true,
+    },
+    {
+        icon: "/images/ecosystem/midle.jpeg",
+        name: "Midle",
+        link: "https://midle.io/",
+        description:
+            "Midle is the web and mobile app boosts user acquisition, retention and engagement.",
+        filters: ["wallet"],
         isLive: true,
     },
     {
@@ -483,6 +585,15 @@ const ecosystemData: EcosystemData[] = [
         link: "https://nfts2me.com/app",
         description:
             "NFTs2Me is a multichain user-friendly comprehensive platform to create, deploy and manage your NFT collection and community, 100% free with advanced functionalities.",
+        filters: [],
+        isLive: true,
+    },
+    {
+        icon: "/images/ecosystem/noder.png",
+        name: "Noder",
+        link: "https://noder.bot/",
+        description:
+            "Infrastructure. Nodes. They're complicated. We manage them for you.",
         filters: [],
         isLive: true,
     },
@@ -636,6 +747,15 @@ const ecosystemData: EcosystemData[] = [
         filters: [],
         isLive: true,
     },
+    // {
+    //     icon: "/images/ecosystem/roguex.svg",
+    //     name: "rougex",
+    //     link: "https://roguex.io/",
+    //     description:
+    //         "RogueX innovates with an AMM that merges perpetual trading into liquidity pools, enhancing asset utilization and supporting leveraged trades for a diverse range of tokens, especially memecoins.",
+    //     filters: [],
+    //     isLive: true,
+    // },
     {
         icon: "/images/ecosystem/rhinofi.svg",
         name: "rhino.fi",
@@ -716,6 +836,14 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/taikoflip.svg",
+        name: "Taiko Flip",
+        link: "https://test.everypunks.xyz/",
+        description: "A 50/50 chance game",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/taiko.svg",
         name: "Taiko Safe",
         link: "https://safe.taiko.xyz/",
@@ -738,6 +866,15 @@ const ecosystemData: EcosystemData[] = [
         link: "https://thirdweb.com",
         description:
             "thirdweb is a complete web3 development framework that provides everything you need to connect your apps and games to decentralized networks.",
+        filters: [],
+        isLive: true,
+    },
+    {
+        icon: "/images/ecosystem/timelessx.png",
+        name: "Timeless X",
+        link: "https://timelesswallet.xyz/",
+        description:
+            "The 1st self-custodial social wallet. Conveniently pay, connect, chat & collaborate with anyone. Powered by account abstraction, open social graphs & censorship-resistant communication.",
         filters: [],
         isLive: true,
     },
@@ -777,6 +914,15 @@ const ecosystemData: EcosystemData[] = [
         filters: [],
         isLive: true,
     },
+    // {
+    //     icon: "/images/ecosystem/xave.png",
+    //     name: "Xave",
+    //     link: "https://www.xave.co",
+    //     description:
+    //         "Xave builds decentralized markets for RWA and on-chain FX.",
+    //     filters: [],
+    //     isLive: true,
+    // },
     {
         icon: "/images/ecosystem/xverse.png",
         name: "Xverse",
