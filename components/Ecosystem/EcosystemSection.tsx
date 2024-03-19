@@ -51,7 +51,7 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
-        icon: "/images/ecosystem/ankr.png",
+        icon: "/images/ecosystem/ankr.svg",
         name: "Ankr",
         link: "https://www.ankr.com/",
         description:
@@ -444,7 +444,7 @@ const ecosystemData: EcosystemData[] = [
         isLive: false,
     },
     {
-        icon: "/images/ecosystem/mintair.jpeg",
+        icon: "/images/ecosystem/mintair.png",
         name: "Mintair",
         link: "https://mintair.xyz",
         description:
@@ -525,15 +525,15 @@ const ecosystemData: EcosystemData[] = [
         filters: [],
         isLive: true,
     },
-    {
-        icon: "/images/ecosystem/lussa.svg",
-        name: "Lussa: The Final Frontier",
-        link: "https://lussa.io",
-        description:
-            "LUSSA is an immersive MMO Battle Royale set in a sprawling sci-fi universe where players wield strategic prowess, forge alliances, and conquer planets, all powered by cutting-edge blockchain technology.",
-        filters: [],
-        isLive: true,
-    },
+    // {
+    //     icon: "/images/ecosystem/lussa.svg",
+    //     name: "Lussa: The Final Frontier",
+    //     link: "https://lussa.io",
+    //     description:
+    //         "LUSSA is an immersive MMO Battle Royale set in a sprawling sci-fi universe where players wield strategic prowess, forge alliances, and conquer planets, all powered by cutting-edge blockchain technology.",
+    //     filters: [],
+    //     isLive: true,
+    // },
     {
         icon: "/images/ecosystem/micro3.png",
         name: "Micro3",
@@ -836,7 +836,7 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
-        icon: "/images/ecosystem/taikoflip.svg",
+        icon: "/images/ecosystem/taikoflip.png",
         name: "Taiko Flip",
         link: "https://test.everypunks.xyz/",
         description: "A 50/50 chance game",
