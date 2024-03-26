@@ -337,6 +337,15 @@ const ecosystemData: EcosystemData[] = [
         isLive: true,
     },
     {
+        icon: "/images/ecosystem/henjin.svg",
+        name: "Henjin DEX",
+        link: "https://henjin.xyz",
+        description:
+            "An innovative and highly flexible DEX built to support the Taiko ecosystem. Community driven and capital efficient.",
+        filters: [],
+        isLive: true,
+    },
+    {
         icon: "/images/ecosystem/hotpot.png",
         name: "Hotpot",
         link: "https://market.hotpot.gg/",
